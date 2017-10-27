@@ -1,6 +1,10 @@
 extends KinematicBody2D
 
-const scn_explosion = preload("res://Prefabs/Explosion/explosion.tscn")
+const scn_explosion = [ 
+	preload("res://Prefabs/Explosion/explosion_0.tscn"),
+	preload("res://Prefabs/Explosion/explosion_1.tscn"),
+	preload("res://Prefabs/Explosion/explosion_2.tscn")
+	]
 
 export var bulletSpeed = 200
 export var bulletFireSFX = "Shoot1"
@@ -12,7 +16,7 @@ var velocity = Vector2()
 func _ready():	
 	set_fixed_process(true)	
 	Global.player_sfx.player.play(self.bulletFireSFX)
-	
+	randomize()
 	
 func SetFireDirection(dir):
 	velocity.x = bulletSpeed * dir
@@ -28,7 +32,9 @@ func _fixed_process(delta):
 		queue_free()
 
 func create_explosion():
-	var explosion = scn_explosion.instance()
+	
+	var idx = int(round(rand_range(0,2)))	
+	var explosion = scn_explosion[idx].instance()
 	explosion.set_pos(get_pos())
 	Utils.main_node.add_child(explosion)
 	pass

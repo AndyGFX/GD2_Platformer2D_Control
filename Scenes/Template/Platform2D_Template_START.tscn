@@ -8,12 +8,15 @@
 
 [node name="Main" type="Node2D"]
 
+editor/display_folded = true
 script/script = ExtResource( 1 )
 smoothFollow = true
 smoothSpeed = 5.0
 useCamera = true
 
 [node name="Tiled_TestLevel" parent="." instance=ExtResource( 2 )]
+
+editor/display_folded = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
@@ -27,5 +30,4 @@ jumpForce = 300
 [node name="SoundFX" parent="." instance=ExtResource( 5 )]
 
 
-[editable path="Tiled_TestLevel"]
 [editable path="Player"]
