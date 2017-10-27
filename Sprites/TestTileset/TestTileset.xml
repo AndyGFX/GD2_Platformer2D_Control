@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="TileSet" subresource_count="45" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
+	<ext_resource path="res://Sprites/TestTileset/TestTileset.png" type="Texture" index="0"></ext_resource>
+	<resource type="ConvexPolygonShape2D" path="local://1">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://2">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://10">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://11">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://12">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://13">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://14">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://15">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://16">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://17">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://18">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://3">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://19">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://20">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://21">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://22">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://23">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://24">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://25">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 5, -8, -1 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://26">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 5, -8, 5 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://27">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, -1, -8, 5 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://4">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://28">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-32, -32, 32, -32, 32, 32, -32, 32 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://29">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://30">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://31">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://32">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-10, -10, 10.0001, -10, 10.0001, 10, -10, 10 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://5">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://33">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://34">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://35">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://36">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://37">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="3"> 			8, 0, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://6">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://38">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, 0, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://39">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://40">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://41">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 0, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://42">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="3"> 			-8, -8, 8, -8, -8, 0 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://7">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://43">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, 4, 8, 4, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://8">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://9">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-8, -8, 8, -8, 8, 8, -8, 8 </vector2_array>
+
+	</resource>
+	<main_resource>
+		<string name="0/name"> "TestTileset0" </string>
+		<resource name="0/texture" external="0">  </resource>
+		<vector2 name="0/tex_offset"> 0, 0 </vector2>
+		<resource name="0/material"></resource>		<color name="0/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="0/region"> 0, 0, 16, 16 </rect2>
+		<vector2 name="0/occluder_offset"> 8, 8 </vector2>
+		<resource name="0/occluder"></resource>		<vector2 name="0/navigation_offset"> 8, 8 </vector2>
+		<resource name="0/navigation"></resource>		<vector2 name="0/shape_offset"> 8, 8 </vector2>
+		<array name="0/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://1">  </resource>
+		</array>
+		<vector2 name="0/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="0/one_way_collision_max_depth"> 0 </real>
+		<string name="1/name"> "TestTileset1" </string>
+		<resource name="1/texture" external="0">  </resource>
+		<vector2 name="1/tex_offset"> 0, 0 </vector2>
+		<resource name="1/material"></resource>		<color name="1/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="1/region"> 16, 0, 16, 16 </rect2>
+		<vector2 name="1/occluder_offset"> 8, 8 </vector2>
+		<resource name="1/occluder"></resource>		<vector2 name="1/navigation_offset"> 8, 8 </vector2>
+		<resource name="1/navigation"></resource>		<vector2 name="1/shape_offset"> 8, 8 </vector2>
+		<array name="1/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://2">  </resource>
+		</array>
+		<vector2 name="1/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="1/one_way_collision_max_depth"> 0 </real>
+		<string name="2/name"> "TestTileset2" </string>
+		<resource name="2/texture" external="0">  </resource>
+		<vector2 name="2/tex_offset"> 0, 0 </vector2>
+		<resource name="2/material"></resource>		<color name="2/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="2/region"> 32, 0, 16, 16 </rect2>
+		<vector2 name="2/occluder_offset"> 8, 8 </vector2>
+		<resource name="2/occluder"></resource>		<vector2 name="2/navigation_offset"> 8, 8 </vector2>
+		<resource name="2/navigation"></resource>		<vector2 name="2/shape_offset"> 8, 8 </vector2>
+		<array name="2/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://3">  </resource>
+		</array>
+		<vector2 name="2/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="2/one_way_collision_max_depth"> 0 </real>
+		<string name="3/name"> "TestTileset3" </string>
+		<resource name="3/texture" external="0">  </resource>
+		<vector2 name="3/tex_offset"> 0, 0 </vector2>
+		<resource name="3/material"></resource>		<color name="3/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="3/region"> 48, 0, 16, 16 </rect2>
+		<vector2 name="3/occluder_offset"> 8, 8 </vector2>
+		<resource name="3/occluder"></resource>		<vector2 name="3/navigation_offset"> 8, 8 </vector2>
+		<resource name="3/navigation"></resource>		<vector2 name="3/shape_offset"> 8, 8 </vector2>
+		<array name="3/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://4">  </resource>
+		</array>
+		<vector2 name="3/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="3/one_way_collision_max_depth"> 0 </real>
+		<string name="4/name"> "TestTileset4" </string>
+		<resource name="4/texture" external="0">  </resource>
+		<vector2 name="4/tex_offset"> 0, 0 </vector2>
+		<resource name="4/material"></resource>		<color name="4/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="4/region"> 64, 0, 16, 16 </rect2>
+		<vector2 name="4/occluder_offset"> 8, 8 </vector2>
+		<resource name="4/occluder"></resource>		<vector2 name="4/navigation_offset"> 8, 8 </vector2>
+		<resource name="4/navigation"></resource>		<vector2 name="4/shape_offset"> 8, 8 </vector2>
+		<array name="4/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://5">  </resource>
+		</array>
+		<vector2 name="4/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="4/one_way_collision_max_depth"> 0 </real>
+		<string name="5/name"> "TestTileset5" </string>
+		<resource name="5/texture" external="0">  </resource>
+		<vector2 name="5/tex_offset"> 0, 0 </vector2>
+		<resource name="5/material"></resource>		<color name="5/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="5/region"> 80, 0, 16, 16 </rect2>
+		<vector2 name="5/occluder_offset"> 8, 8 </vector2>
+		<resource name="5/occluder"></resource>		<vector2 name="5/navigation_offset"> 8, 8 </vector2>
+		<resource name="5/navigation"></resource>		<vector2 name="5/shape_offset"> 8, 8 </vector2>
+		<array name="5/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://6">  </resource>
+		</array>
+		<vector2 name="5/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="5/one_way_collision_max_depth"> 0 </real>
+		<string name="6/name"> "TestTileset6" </string>
+		<resource name="6/texture" external="0">  </resource>
+		<vector2 name="6/tex_offset"> 0, 0 </vector2>
+		<resource name="6/material"></resource>		<color name="6/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="6/region"> 96, 0, 16, 16 </rect2>
+		<vector2 name="6/occluder_offset"> 8, 8 </vector2>
+		<resource name="6/occluder"></resource>		<vector2 name="6/navigation_offset"> 8, 8 </vector2>
+		<resource name="6/navigation"></resource>		<vector2 name="6/shape_offset"> 8, 8 </vector2>
+		<array name="6/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="6/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="6/one_way_collision_max_depth"> 0 </real>
+		<string name="7/name"> "TestTileset7" </string>
+		<resource name="7/texture" external="0">  </resource>
+		<vector2 name="7/tex_offset"> 0, 0 </vector2>
+		<resource name="7/material"></resource>		<color name="7/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="7/region"> 112, 0, 16, 16 </rect2>
+		<vector2 name="7/occluder_offset"> 8, 8 </vector2>
+		<resource name="7/occluder"></resource>		<vector2 name="7/navigation_offset"> 8, 8 </vector2>
+		<resource name="7/navigation"></resource>		<vector2 name="7/shape_offset"> 0, 0 </vector2>
+		<array name="7/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="7/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="7/one_way_collision_max_depth"> 0 </real>
+		<string name="8/name"> "TestTileset8" </string>
+		<resource name="8/texture" external="0">  </resource>
+		<vector2 name="8/tex_offset"> 0, 0 </vector2>
+		<resource name="8/material"></resource>		<color name="8/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="8/region"> 0, 16, 16, 16 </rect2>
+		<vector2 name="8/occluder_offset"> 8, 8 </vector2>
+		<resource name="8/occluder"></resource>		<vector2 name="8/navigation_offset"> 8, 8 </vector2>
+		<resource name="8/navigation"></resource>		<vector2 name="8/shape_offset"> 8, 8 </vector2>
+		<array name="8/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://8">  </resource>
+		</array>
+		<vector2 name="8/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="8/one_way_collision_max_depth"> 0 </real>
+		<string name="9/name"> "TestTileset9" </string>
+		<resource name="9/texture" external="0">  </resource>
+		<vector2 name="9/tex_offset"> 0, 0 </vector2>
+		<resource name="9/material"></resource>		<color name="9/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="9/region"> 16, 16, 16, 16 </rect2>
+		<vector2 name="9/occluder_offset"> 8, 8 </vector2>
+		<resource name="9/occluder"></resource>		<vector2 name="9/navigation_offset"> 8, 8 </vector2>
+		<resource name="9/navigation"></resource>		<vector2 name="9/shape_offset"> 8, 8 </vector2>
+		<array name="9/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://9">  </resource>
+		</array>
+		<vector2 name="9/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="9/one_way_collision_max_depth"> 0 </real>
+		<string name="10/name"> "TestTileset10" </string>
+		<resource name="10/texture" external="0">  </resource>
+		<vector2 name="10/tex_offset"> 0, 0 </vector2>
+		<resource name="10/material"></resource>		<color name="10/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="10/region"> 32, 16, 16, 16 </rect2>
+		<vector2 name="10/occluder_offset"> 8, 8 </vector2>
+		<resource name="10/occluder"></resource>		<vector2 name="10/navigation_offset"> 8, 8 </vector2>
+		<resource name="10/navigation"></resource>		<vector2 name="10/shape_offset"> 8, 8 </vector2>
+		<array name="10/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://10">  </resource>
+		</array>
+		<vector2 name="10/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="10/one_way_collision_max_depth"> 0 </real>
+		<string name="11/name"> "TestTileset11" </string>
+		<resource name="11/texture" external="0">  </resource>
+		<vector2 name="11/tex_offset"> 0, 0 </vector2>
+		<resource name="11/material"></resource>		<color name="11/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="11/region"> 48, 16, 16, 16 </rect2>
+		<vector2 name="11/occluder_offset"> 8, 8 </vector2>
+		<resource name="11/occluder"></resource>		<vector2 name="11/navigation_offset"> 8, 8 </vector2>
+		<resource name="11/navigation"></resource>		<vector2 name="11/shape_offset"> 8, 8 </vector2>
+		<array name="11/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://11">  </resource>
+		</array>
+		<vector2 name="11/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="11/one_way_collision_max_depth"> 0 </real>
+		<string name="12/name"> "TestTileset12" </string>
+		<resource name="12/texture" external="0">  </resource>
+		<vector2 name="12/tex_offset"> 0, 0 </vector2>
+		<resource name="12/material"></resource>		<color name="12/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="12/region"> 64, 16, 16, 16 </rect2>
+		<vector2 name="12/occluder_offset"> 8, 8 </vector2>
+		<resource name="12/occluder"></resource>		<vector2 name="12/navigation_offset"> 8, 8 </vector2>
+		<resource name="12/navigation"></resource>		<vector2 name="12/shape_offset"> 8, 8 </vector2>
+		<array name="12/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://12">  </resource>
+		</array>
+		<vector2 name="12/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="12/one_way_collision_max_depth"> 0 </real>
+		<string name="13/name"> "TestTileset13" </string>
+		<resource name="13/texture" external="0">  </resource>
+		<vector2 name="13/tex_offset"> 0, 0 </vector2>
+		<resource name="13/material"></resource>		<color name="13/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="13/region"> 80, 16, 16, 16 </rect2>
+		<vector2 name="13/occluder_offset"> 8, 8 </vector2>
+		<resource name="13/occluder"></resource>		<vector2 name="13/navigation_offset"> 8, 8 </vector2>
+		<resource name="13/navigation"></resource>		<vector2 name="13/shape_offset"> 8, 8 </vector2>
+		<array name="13/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://13">  </resource>
+		</array>
+		<vector2 name="13/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="13/one_way_collision_max_depth"> 0 </real>
+		<string name="14/name"> "TestTileset14" </string>
+		<resource name="14/texture" external="0">  </resource>
+		<vector2 name="14/tex_offset"> 0, 0 </vector2>
+		<resource name="14/material"></resource>		<color name="14/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="14/region"> 96, 16, 16, 16 </rect2>
+		<vector2 name="14/occluder_offset"> 8, 8 </vector2>
+		<resource name="14/occluder"></resource>		<vector2 name="14/navigation_offset"> 8, 8 </vector2>
+		<resource name="14/navigation"></resource>		<vector2 name="14/shape_offset"> 8, 8 </vector2>
+		<array name="14/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://14">  </resource>
+		</array>
+		<vector2 name="14/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="14/one_way_collision_max_depth"> 0 </real>
+		<string name="15/name"> "TestTileset15" </string>
+		<resource name="15/texture" external="0">  </resource>
+		<vector2 name="15/tex_offset"> 0, 0 </vector2>
+		<resource name="15/material"></resource>		<color name="15/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="15/region"> 112, 16, 16, 16 </rect2>
+		<vector2 name="15/occluder_offset"> 8, 8 </vector2>
+		<resource name="15/occluder"></resource>		<vector2 name="15/navigation_offset"> 8, 8 </vector2>
+		<resource name="15/navigation"></resource>		<vector2 name="15/shape_offset"> 0, 0 </vector2>
+		<array name="15/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="15/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="15/one_way_collision_max_depth"> 0 </real>
+		<string name="16/name"> "TestTileset16" </string>
+		<resource name="16/texture" external="0">  </resource>
+		<vector2 name="16/tex_offset"> 0, 0 </vector2>
+		<resource name="16/material"></resource>		<color name="16/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="16/region"> 0, 32, 16, 16 </rect2>
+		<vector2 name="16/occluder_offset"> 8, 8 </vector2>
+		<resource name="16/occluder"></resource>		<vector2 name="16/navigation_offset"> 8, 8 </vector2>
+		<resource name="16/navigation"></resource>		<vector2 name="16/shape_offset"> 8, 8 </vector2>
+		<array name="16/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://15">  </resource>
+		</array>
+		<vector2 name="16/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="16/one_way_collision_max_depth"> 0 </real>
+		<string name="17/name"> "TestTileset17" </string>
+		<resource name="17/texture" external="0">  </resource>
+		<vector2 name="17/tex_offset"> 0, 0 </vector2>
+		<resource name="17/material"></resource>		<color name="17/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="17/region"> 16, 32, 16, 16 </rect2>
+		<vector2 name="17/occluder_offset"> 8, 8 </vector2>
+		<resource name="17/occluder"></resource>		<vector2 name="17/navigation_offset"> 8, 8 </vector2>
+		<resource name="17/navigation"></resource>		<vector2 name="17/shape_offset"> 8, 8 </vector2>
+		<array name="17/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://16">  </resource>
+		</array>
+		<vector2 name="17/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="17/one_way_collision_max_depth"> 0 </real>
+		<string name="18/name"> "TestTileset18" </string>
+		<resource name="18/texture" external="0">  </resource>
+		<vector2 name="18/tex_offset"> 0, 0 </vector2>
+		<resource name="18/material"></resource>		<color name="18/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="18/region"> 32, 32, 16, 16 </rect2>
+		<vector2 name="18/occluder_offset"> 8, 8 </vector2>
+		<resource name="18/occluder"></resource>		<vector2 name="18/navigation_offset"> 8, 8 </vector2>
+		<resource name="18/navigation"></resource>		<vector2 name="18/shape_offset"> 8, 8 </vector2>
+		<array name="18/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://17">  </resource>
+		</array>
+		<vector2 name="18/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="18/one_way_collision_max_depth"> 0 </real>
+		<string name="19/name"> "TestTileset19" </string>
+		<resource name="19/texture" external="0">  </resource>
+		<vector2 name="19/tex_offset"> 0, 0 </vector2>
+		<resource name="19/material"></resource>		<color name="19/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="19/region"> 48, 32, 16, 16 </rect2>
+		<vector2 name="19/occluder_offset"> 8, 8 </vector2>
+		<resource name="19/occluder"></resource>		<vector2 name="19/navigation_offset"> 8, 8 </vector2>
+		<resource name="19/navigation"></resource>		<vector2 name="19/shape_offset"> 8, 8 </vector2>
+		<array name="19/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://18">  </resource>
+		</array>
+		<vector2 name="19/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="19/one_way_collision_max_depth"> 0 </real>
+		<string name="20/name"> "TestTileset20" </string>
+		<resource name="20/texture" external="0">  </resource>
+		<vector2 name="20/tex_offset"> 0, 0 </vector2>
+		<resource name="20/material"></resource>		<color name="20/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="20/region"> 64, 32, 16, 16 </rect2>
+		<vector2 name="20/occluder_offset"> 8, 8 </vector2>
+		<resource name="20/occluder"></resource>		<vector2 name="20/navigation_offset"> 8, 8 </vector2>
+		<resource name="20/navigation"></resource>		<vector2 name="20/shape_offset"> 8, 8 </vector2>
+		<array name="20/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://19">  </resource>
+		</array>
+		<vector2 name="20/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="20/one_way_collision_max_depth"> 0 </real>
+		<string name="21/name"> "TestTileset21" </string>
+		<resource name="21/texture" external="0">  </resource>
+		<vector2 name="21/tex_offset"> 0, 0 </vector2>
+		<resource name="21/material"></resource>		<color name="21/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="21/region"> 80, 32, 16, 16 </rect2>
+		<vector2 name="21/occluder_offset"> 8, 8 </vector2>
+		<resource name="21/occluder"></resource>		<vector2 name="21/navigation_offset"> 8, 8 </vector2>
+		<resource name="21/navigation"></resource>		<vector2 name="21/shape_offset"> 8, 8 </vector2>
+		<array name="21/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://20">  </resource>
+		</array>
+		<vector2 name="21/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="21/one_way_collision_max_depth"> 0 </real>
+		<string name="22/name"> "TestTileset22" </string>
+		<resource name="22/texture" external="0">  </resource>
+		<vector2 name="22/tex_offset"> 0, 0 </vector2>
+		<resource name="22/material"></resource>		<color name="22/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="22/region"> 96, 32, 16, 16 </rect2>
+		<vector2 name="22/occluder_offset"> 8, 8 </vector2>
+		<resource name="22/occluder"></resource>		<vector2 name="22/navigation_offset"> 8, 8 </vector2>
+		<resource name="22/navigation"></resource>		<vector2 name="22/shape_offset"> 8, 8 </vector2>
+		<array name="22/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://21">  </resource>
+		</array>
+		<vector2 name="22/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="22/one_way_collision_max_depth"> 0 </real>
+		<string name="23/name"> "TestTileset23" </string>
+		<resource name="23/texture" external="0">  </resource>
+		<vector2 name="23/tex_offset"> 0, 0 </vector2>
+		<resource name="23/material"></resource>		<color name="23/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="23/region"> 112, 32, 16, 16 </rect2>
+		<vector2 name="23/occluder_offset"> 8, 8 </vector2>
+		<resource name="23/occluder"></resource>		<vector2 name="23/navigation_offset"> 8, 8 </vector2>
+		<resource name="23/navigation"></resource>		<vector2 name="23/shape_offset"> 0, 0 </vector2>
+		<array name="23/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="23/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="23/one_way_collision_max_depth"> 0 </real>
+		<string name="24/name"> "TestTileset24" </string>
+		<resource name="24/texture" external="0">  </resource>
+		<vector2 name="24/tex_offset"> 0, 0 </vector2>
+		<resource name="24/material"></resource>		<color name="24/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="24/region"> 0, 48, 16, 16 </rect2>
+		<vector2 name="24/occluder_offset"> 8, 8 </vector2>
+		<resource name="24/occluder"></resource>		<vector2 name="24/navigation_offset"> 8, 8 </vector2>
+		<resource name="24/navigation"></resource>		<vector2 name="24/shape_offset"> 8, 8 </vector2>
+		<array name="24/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://22">  </resource>
+		</array>
+		<vector2 name="24/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="24/one_way_collision_max_depth"> 0 </real>
+		<string name="25/name"> "TestTileset25" </string>
+		<resource name="25/texture" external="0">  </resource>
+		<vector2 name="25/tex_offset"> 0, 0 </vector2>
+		<resource name="25/material"></resource>		<color name="25/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="25/region"> 16, 48, 16, 16 </rect2>
+		<vector2 name="25/occluder_offset"> 8, 8 </vector2>
+		<resource name="25/occluder"></resource>		<vector2 name="25/navigation_offset"> 8, 8 </vector2>
+		<resource name="25/navigation"></resource>		<vector2 name="25/shape_offset"> 8, 8 </vector2>
+		<array name="25/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://23">  </resource>
+		</array>
+		<vector2 name="25/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="25/one_way_collision_max_depth"> 0 </real>
+		<string name="26/name"> "TestTileset26" </string>
+		<resource name="26/texture" external="0">  </resource>
+		<vector2 name="26/tex_offset"> 0, 0 </vector2>
+		<resource name="26/material"></resource>		<color name="26/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="26/region"> 32, 48, 16, 16 </rect2>
+		<vector2 name="26/occluder_offset"> 8, 8 </vector2>
+		<resource name="26/occluder"></resource>		<vector2 name="26/navigation_offset"> 8, 8 </vector2>
+		<resource name="26/navigation"></resource>		<vector2 name="26/shape_offset"> 8, 8 </vector2>
+		<array name="26/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://24">  </resource>
+		</array>
+		<vector2 name="26/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="26/one_way_collision_max_depth"> 0 </real>
+		<string name="27/name"> "TestTileset27" </string>
+		<resource name="27/texture" external="0">  </resource>
+		<vector2 name="27/tex_offset"> 0, 0 </vector2>
+		<resource name="27/material"></resource>		<color name="27/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="27/region"> 48, 48, 16, 16 </rect2>
+		<vector2 name="27/occluder_offset"> 8, 8 </vector2>
+		<resource name="27/occluder"></resource>		<vector2 name="27/navigation_offset"> 8, 8 </vector2>
+		<resource name="27/navigation"></resource>		<vector2 name="27/shape_offset"> 8, 8 </vector2>
+		<array name="27/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://25">  </resource>
+		</array>
+		<vector2 name="27/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="27/one_way_collision_max_depth"> 0 </real>
+		<string name="28/name"> "TestTileset28" </string>
+		<resource name="28/texture" external="0">  </resource>
+		<vector2 name="28/tex_offset"> 0, 0 </vector2>
+		<resource name="28/material"></resource>		<color name="28/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="28/region"> 64, 48, 16, 16 </rect2>
+		<vector2 name="28/occluder_offset"> 8, 8 </vector2>
+		<resource name="28/occluder"></resource>		<vector2 name="28/navigation_offset"> 8, 8 </vector2>
+		<resource name="28/navigation"></resource>		<vector2 name="28/shape_offset"> 8, 8 </vector2>
+		<array name="28/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://26">  </resource>
+		</array>
+		<vector2 name="28/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="28/one_way_collision_max_depth"> 0 </real>
+		<string name="29/name"> "TestTileset29" </string>
+		<resource name="29/texture" external="0">  </resource>
+		<vector2 name="29/tex_offset"> 0, 0 </vector2>
+		<resource name="29/material"></resource>		<color name="29/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="29/region"> 80, 48, 16, 16 </rect2>
+		<vector2 name="29/occluder_offset"> 8, 8 </vector2>
+		<resource name="29/occluder"></resource>		<vector2 name="29/navigation_offset"> 8, 8 </vector2>
+		<resource name="29/navigation"></resource>		<vector2 name="29/shape_offset"> 8, 8 </vector2>
+		<array name="29/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://27">  </resource>
+		</array>
+		<vector2 name="29/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="29/one_way_collision_max_depth"> 0 </real>
+		<string name="30/name"> "TestTileset30" </string>
+		<resource name="30/texture" external="0">  </resource>
+		<vector2 name="30/tex_offset"> 0, 0 </vector2>
+		<resource name="30/material"></resource>		<color name="30/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="30/region"> 96, 48, 16, 16 </rect2>
+		<vector2 name="30/occluder_offset"> 8, 8 </vector2>
+		<resource name="30/occluder"></resource>		<vector2 name="30/navigation_offset"> 8, 8 </vector2>
+		<resource name="30/navigation"></resource>		<vector2 name="30/shape_offset"> 0, 0 </vector2>
+		<array name="30/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="30/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="30/one_way_collision_max_depth"> 0 </real>
+		<string name="31/name"> "TestTileset31" </string>
+		<resource name="31/texture" external="0">  </resource>
+		<vector2 name="31/tex_offset"> 0, 0 </vector2>
+		<resource name="31/material"></resource>		<color name="31/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="31/region"> 112, 48, 16, 16 </rect2>
+		<vector2 name="31/occluder_offset"> 8, 3 </vector2>
+		<resource name="31/occluder"></resource>		<vector2 name="31/navigation_offset"> 8, 3 </vector2>
+		<resource name="31/navigation"></resource>		<vector2 name="31/shape_offset"> 8, 3 </vector2>
+		<array name="31/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://28">  </resource>
+		</array>
+		<vector2 name="31/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="31/one_way_collision_max_depth"> 0 </real>
+		<string name="32/name"> "TestTileset32" </string>
+		<resource name="32/texture" external="0">  </resource>
+		<vector2 name="32/tex_offset"> 0, 0 </vector2>
+		<resource name="32/material"></resource>		<color name="32/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="32/region"> 0, 64, 16, 16 </rect2>
+		<vector2 name="32/occluder_offset"> 8, 8 </vector2>
+		<resource name="32/occluder"></resource>		<vector2 name="32/navigation_offset"> 8, 8 </vector2>
+		<resource name="32/navigation"></resource>		<vector2 name="32/shape_offset"> 8, 8 </vector2>
+		<array name="32/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://29">  </resource>
+		</array>
+		<vector2 name="32/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="32/one_way_collision_max_depth"> 0 </real>
+		<string name="33/name"> "TestTileset33" </string>
+		<resource name="33/texture" external="0">  </resource>
+		<vector2 name="33/tex_offset"> 0, 0 </vector2>
+		<resource name="33/material"></resource>		<color name="33/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="33/region"> 16, 64, 16, 16 </rect2>
+		<vector2 name="33/occluder_offset"> 8, 8 </vector2>
+		<resource name="33/occluder"></resource>		<vector2 name="33/navigation_offset"> 8, 8 </vector2>
+		<resource name="33/navigation"></resource>		<vector2 name="33/shape_offset"> 8, 8 </vector2>
+		<array name="33/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://30">  </resource>
+		</array>
+		<vector2 name="33/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="33/one_way_collision_max_depth"> 0 </real>
+		<string name="34/name"> "TestTileset34" </string>
+		<resource name="34/texture" external="0">  </resource>
+		<vector2 name="34/tex_offset"> 0, 0 </vector2>
+		<resource name="34/material"></resource>		<color name="34/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="34/region"> 32, 64, 16, 16 </rect2>
+		<vector2 name="34/occluder_offset"> 8, 8 </vector2>
+		<resource name="34/occluder"></resource>		<vector2 name="34/navigation_offset"> 8, 8 </vector2>
+		<resource name="34/navigation"></resource>		<vector2 name="34/shape_offset"> 8, 8 </vector2>
+		<array name="34/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://31">  </resource>
+		</array>
+		<vector2 name="34/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="34/one_way_collision_max_depth"> 0 </real>
+		<string name="35/name"> "TestTileset35" </string>
+		<resource name="35/texture" external="0">  </resource>
+		<vector2 name="35/tex_offset"> 0, 0 </vector2>
+		<resource name="35/material"></resource>		<color name="35/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="35/region"> 48, 64, 16, 16 </rect2>
+		<vector2 name="35/occluder_offset"> 8, 8 </vector2>
+		<resource name="35/occluder"></resource>		<vector2 name="35/navigation_offset"> 8, 8 </vector2>
+		<resource name="35/navigation"></resource>		<vector2 name="35/shape_offset"> 0, 0 </vector2>
+		<array name="35/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="35/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="35/one_way_collision_max_depth"> 0 </real>
+		<string name="36/name"> "TestTileset36" </string>
+		<resource name="36/texture" external="0">  </resource>
+		<vector2 name="36/tex_offset"> 0, 0 </vector2>
+		<resource name="36/material"></resource>		<color name="36/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="36/region"> 64, 64, 16, 16 </rect2>
+		<vector2 name="36/occluder_offset"> 8, 8 </vector2>
+		<resource name="36/occluder"></resource>		<vector2 name="36/navigation_offset"> 8, 8 </vector2>
+		<resource name="36/navigation"></resource>		<vector2 name="36/shape_offset"> 0, 0 </vector2>
+		<array name="36/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="36/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="36/one_way_collision_max_depth"> 0 </real>
+		<string name="37/name"> "TestTileset37" </string>
+		<resource name="37/texture" external="0">  </resource>
+		<vector2 name="37/tex_offset"> 0, 0 </vector2>
+		<resource name="37/material"></resource>		<color name="37/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="37/region"> 80, 64, 16, 16 </rect2>
+		<vector2 name="37/occluder_offset"> 8, 8 </vector2>
+		<resource name="37/occluder"></resource>		<vector2 name="37/navigation_offset"> 8, 8 </vector2>
+		<resource name="37/navigation"></resource>		<vector2 name="37/shape_offset"> 0, 0 </vector2>
+		<array name="37/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="37/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="37/one_way_collision_max_depth"> 0 </real>
+		<string name="38/name"> "TestTileset38" </string>
+		<resource name="38/texture" external="0">  </resource>
+		<vector2 name="38/tex_offset"> 0, 0 </vector2>
+		<resource name="38/material"></resource>		<color name="38/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="38/region"> 96, 64, 16, 16 </rect2>
+		<vector2 name="38/occluder_offset"> 8, 8 </vector2>
+		<resource name="38/occluder"></resource>		<vector2 name="38/navigation_offset"> 8, 8 </vector2>
+		<resource name="38/navigation"></resource>		<vector2 name="38/shape_offset"> 0, 0 </vector2>
+		<array name="38/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="38/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="38/one_way_collision_max_depth"> 0 </real>
+		<string name="39/name"> "TestTileset39" </string>
+		<resource name="39/texture" external="0">  </resource>
+		<vector2 name="39/tex_offset"> 0, 0 </vector2>
+		<resource name="39/material"></resource>		<color name="39/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="39/region"> 112, 64, 16, 16 </rect2>
+		<vector2 name="39/occluder_offset"> 2, 8 </vector2>
+		<resource name="39/occluder"></resource>		<vector2 name="39/navigation_offset"> 2, 8 </vector2>
+		<resource name="39/navigation"></resource>		<vector2 name="39/shape_offset"> 2, 8 </vector2>
+		<array name="39/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://32">  </resource>
+		</array>
+		<vector2 name="39/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="39/one_way_collision_max_depth"> 0 </real>
+		<string name="40/name"> "TestTileset40" </string>
+		<resource name="40/texture" external="0">  </resource>
+		<vector2 name="40/tex_offset"> 0, 0 </vector2>
+		<resource name="40/material"></resource>		<color name="40/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="40/region"> 0, 80, 16, 16 </rect2>
+		<vector2 name="40/occluder_offset"> 8, 8 </vector2>
+		<resource name="40/occluder"></resource>		<vector2 name="40/navigation_offset"> 8, 8 </vector2>
+		<resource name="40/navigation"></resource>		<vector2 name="40/shape_offset"> 8, 8 </vector2>
+		<array name="40/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://33">  </resource>
+		</array>
+		<vector2 name="40/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="40/one_way_collision_max_depth"> 0 </real>
+		<string name="41/name"> "TestTileset41" </string>
+		<resource name="41/texture" external="0">  </resource>
+		<vector2 name="41/tex_offset"> 0, 0 </vector2>
+		<resource name="41/material"></resource>		<color name="41/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="41/region"> 16, 80, 16, 16 </rect2>
+		<vector2 name="41/occluder_offset"> 8, 8 </vector2>
+		<resource name="41/occluder"></resource>		<vector2 name="41/navigation_offset"> 8, 8 </vector2>
+		<resource name="41/navigation"></resource>		<vector2 name="41/shape_offset"> 8, 8 </vector2>
+		<array name="41/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://34">  </resource>
+		</array>
+		<vector2 name="41/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="41/one_way_collision_max_depth"> 0 </real>
+		<string name="42/name"> "TestTileset42" </string>
+		<resource name="42/texture" external="0">  </resource>
+		<vector2 name="42/tex_offset"> 0, 0 </vector2>
+		<resource name="42/material"></resource>		<color name="42/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="42/region"> 32, 80, 16, 16 </rect2>
+		<vector2 name="42/occluder_offset"> 8, 8 </vector2>
+		<resource name="42/occluder"></resource>		<vector2 name="42/navigation_offset"> 8, 8 </vector2>
+		<resource name="42/navigation"></resource>		<vector2 name="42/shape_offset"> 8, 8 </vector2>
+		<array name="42/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://35">  </resource>
+		</array>
+		<vector2 name="42/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="42/one_way_collision_max_depth"> 0 </real>
+		<string name="43/name"> "TestTileset43" </string>
+		<resource name="43/texture" external="0">  </resource>
+		<vector2 name="43/tex_offset"> 0, 0 </vector2>
+		<resource name="43/material"></resource>		<color name="43/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="43/region"> 48, 80, 16, 16 </rect2>
+		<vector2 name="43/occluder_offset"> 8, 8 </vector2>
+		<resource name="43/occluder"></resource>		<vector2 name="43/navigation_offset"> 8, 8 </vector2>
+		<resource name="43/navigation"></resource>		<vector2 name="43/shape_offset"> 0, 0 </vector2>
+		<array name="43/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="43/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="43/one_way_collision_max_depth"> 0 </real>
+		<string name="44/name"> "TestTileset44" </string>
+		<resource name="44/texture" external="0">  </resource>
+		<vector2 name="44/tex_offset"> 0, 0 </vector2>
+		<resource name="44/material"></resource>		<color name="44/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="44/region"> 64, 80, 16, 16 </rect2>
+		<vector2 name="44/occluder_offset"> 8, 8 </vector2>
+		<resource name="44/occluder"></resource>		<vector2 name="44/navigation_offset"> 8, 8 </vector2>
+		<resource name="44/navigation"></resource>		<vector2 name="44/shape_offset"> 0, 0 </vector2>
+		<array name="44/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="44/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="44/one_way_collision_max_depth"> 0 </real>
+		<string name="45/name"> "TestTileset45" </string>
+		<resource name="45/texture" external="0">  </resource>
+		<vector2 name="45/tex_offset"> 0, 0 </vector2>
+		<resource name="45/material"></resource>		<color name="45/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="45/region"> 80, 80, 16, 16 </rect2>
+		<vector2 name="45/occluder_offset"> 8, 8 </vector2>
+		<resource name="45/occluder"></resource>		<vector2 name="45/navigation_offset"> 8, 8 </vector2>
+		<resource name="45/navigation"></resource>		<vector2 name="45/shape_offset"> 0, 0 </vector2>
+		<array name="45/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="45/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="45/one_way_collision_max_depth"> 0 </real>
+		<string name="46/name"> "TestTileset46" </string>
+		<resource name="46/texture" external="0">  </resource>
+		<vector2 name="46/tex_offset"> 0, 0 </vector2>
+		<resource name="46/material"></resource>		<color name="46/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="46/region"> 96, 80, 16, 16 </rect2>
+		<vector2 name="46/occluder_offset"> 8, 8 </vector2>
+		<resource name="46/occluder"></resource>		<vector2 name="46/navigation_offset"> 8, 8 </vector2>
+		<resource name="46/navigation"></resource>		<vector2 name="46/shape_offset"> 0, 0 </vector2>
+		<array name="46/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="46/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="46/one_way_collision_max_depth"> 0 </real>
+		<string name="47/name"> "TestTileset47" </string>
+		<resource name="47/texture" external="0">  </resource>
+		<vector2 name="47/tex_offset"> 0, 0 </vector2>
+		<resource name="47/material"></resource>		<color name="47/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="47/region"> 112, 80, 16, 16 </rect2>
+		<vector2 name="47/occluder_offset"> 8, 8 </vector2>
+		<resource name="47/occluder"></resource>		<vector2 name="47/navigation_offset"> 8, 8 </vector2>
+		<resource name="47/navigation"></resource>		<vector2 name="47/shape_offset"> 0, 0 </vector2>
+		<array name="47/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="47/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="47/one_way_collision_max_depth"> 0 </real>
+		<string name="48/name"> "TestTileset48" </string>
+		<resource name="48/texture" external="0">  </resource>
+		<vector2 name="48/tex_offset"> 0, 0 </vector2>
+		<resource name="48/material"></resource>		<color name="48/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="48/region"> 0, 96, 16, 16 </rect2>
+		<vector2 name="48/occluder_offset"> 8, 8 </vector2>
+		<resource name="48/occluder"></resource>		<vector2 name="48/navigation_offset"> 8, 8 </vector2>
+		<resource name="48/navigation"></resource>		<vector2 name="48/shape_offset"> 8, 8 </vector2>
+		<array name="48/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://36">  </resource>
+		</array>
+		<vector2 name="48/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="48/one_way_collision_max_depth"> 0 </real>
+		<string name="49/name"> "TestTileset49" </string>
+		<resource name="49/texture" external="0">  </resource>
+		<vector2 name="49/tex_offset"> 0, 0 </vector2>
+		<resource name="49/material"></resource>		<color name="49/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="49/region"> 16, 96, 16, 16 </rect2>
+		<vector2 name="49/occluder_offset"> 8, 8 </vector2>
+		<resource name="49/occluder"></resource>		<vector2 name="49/navigation_offset"> 8, 8 </vector2>
+		<resource name="49/navigation"></resource>		<vector2 name="49/shape_offset"> 8, 8 </vector2>
+		<array name="49/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://37">  </resource>
+		</array>
+		<vector2 name="49/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="49/one_way_collision_max_depth"> 0 </real>
+		<string name="50/name"> "TestTileset50" </string>
+		<resource name="50/texture" external="0">  </resource>
+		<vector2 name="50/tex_offset"> 0, 0 </vector2>
+		<resource name="50/material"></resource>		<color name="50/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="50/region"> 32, 96, 16, 16 </rect2>
+		<vector2 name="50/occluder_offset"> 8, 8 </vector2>
+		<resource name="50/occluder"></resource>		<vector2 name="50/navigation_offset"> 8, 8 </vector2>
+		<resource name="50/navigation"></resource>		<vector2 name="50/shape_offset"> 8, 8 </vector2>
+		<array name="50/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://38">  </resource>
+		</array>
+		<vector2 name="50/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="50/one_way_collision_max_depth"> 0 </real>
+		<string name="51/name"> "TestTileset51" </string>
+		<resource name="51/texture" external="0">  </resource>
+		<vector2 name="51/tex_offset"> 0, 0 </vector2>
+		<resource name="51/material"></resource>		<color name="51/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="51/region"> 48, 96, 16, 16 </rect2>
+		<vector2 name="51/occluder_offset"> 8, 8 </vector2>
+		<resource name="51/occluder"></resource>		<vector2 name="51/navigation_offset"> 8, 8 </vector2>
+		<resource name="51/navigation"></resource>		<vector2 name="51/shape_offset"> 8, 8 </vector2>
+		<array name="51/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://39">  </resource>
+		</array>
+		<vector2 name="51/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="51/one_way_collision_max_depth"> 0 </real>
+		<string name="52/name"> "TestTileset52" </string>
+		<resource name="52/texture" external="0">  </resource>
+		<vector2 name="52/tex_offset"> 0, 0 </vector2>
+		<resource name="52/material"></resource>		<color name="52/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="52/region"> 64, 96, 16, 16 </rect2>
+		<vector2 name="52/occluder_offset"> 8, 8 </vector2>
+		<resource name="52/occluder"></resource>		<vector2 name="52/navigation_offset"> 8, 8 </vector2>
+		<resource name="52/navigation"></resource>		<vector2 name="52/shape_offset"> 0, 0 </vector2>
+		<array name="52/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="52/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="52/one_way_collision_max_depth"> 0 </real>
+		<string name="53/name"> "TestTileset53" </string>
+		<resource name="53/texture" external="0">  </resource>
+		<vector2 name="53/tex_offset"> 0, 0 </vector2>
+		<resource name="53/material"></resource>		<color name="53/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="53/region"> 80, 96, 16, 16 </rect2>
+		<vector2 name="53/occluder_offset"> 8, 8 </vector2>
+		<resource name="53/occluder"></resource>		<vector2 name="53/navigation_offset"> 8, 8 </vector2>
+		<resource name="53/navigation"></resource>		<vector2 name="53/shape_offset"> 0, 0 </vector2>
+		<array name="53/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="53/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="53/one_way_collision_max_depth"> 0 </real>
+		<string name="54/name"> "TestTileset54" </string>
+		<resource name="54/texture" external="0">  </resource>
+		<vector2 name="54/tex_offset"> 0, 0 </vector2>
+		<resource name="54/material"></resource>		<color name="54/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="54/region"> 96, 96, 16, 16 </rect2>
+		<vector2 name="54/occluder_offset"> 8, 8 </vector2>
+		<resource name="54/occluder"></resource>		<vector2 name="54/navigation_offset"> 8, 8 </vector2>
+		<resource name="54/navigation"></resource>		<vector2 name="54/shape_offset"> 0, 0 </vector2>
+		<array name="54/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="54/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="54/one_way_collision_max_depth"> 0 </real>
+		<string name="55/name"> "TestTileset55" </string>
+		<resource name="55/texture" external="0">  </resource>
+		<vector2 name="55/tex_offset"> 0, 0 </vector2>
+		<resource name="55/material"></resource>		<color name="55/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="55/region"> 112, 96, 16, 16 </rect2>
+		<vector2 name="55/occluder_offset"> 8, 8 </vector2>
+		<resource name="55/occluder"></resource>		<vector2 name="55/navigation_offset"> 8, 8 </vector2>
+		<resource name="55/navigation"></resource>		<vector2 name="55/shape_offset"> 0, 0 </vector2>
+		<array name="55/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="55/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="55/one_way_collision_max_depth"> 0 </real>
+		<string name="56/name"> "TestTileset56" </string>
+		<resource name="56/texture" external="0">  </resource>
+		<vector2 name="56/tex_offset"> 0, 0 </vector2>
+		<resource name="56/material"></resource>		<color name="56/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="56/region"> 0, 112, 16, 16 </rect2>
+		<vector2 name="56/occluder_offset"> 8, 8 </vector2>
+		<resource name="56/occluder"></resource>		<vector2 name="56/navigation_offset"> 8, 8 </vector2>
+		<resource name="56/navigation"></resource>		<vector2 name="56/shape_offset"> 8, 8 </vector2>
+		<array name="56/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://40">  </resource>
+		</array>
+		<vector2 name="56/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="56/one_way_collision_max_depth"> 0 </real>
+		<string name="57/name"> "TestTileset57" </string>
+		<resource name="57/texture" external="0">  </resource>
+		<vector2 name="57/tex_offset"> 0, 0 </vector2>
+		<resource name="57/material"></resource>		<color name="57/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="57/region"> 16, 112, 16, 16 </rect2>
+		<vector2 name="57/occluder_offset"> 8, 8 </vector2>
+		<resource name="57/occluder"></resource>		<vector2 name="57/navigation_offset"> 8, 8 </vector2>
+		<resource name="57/navigation"></resource>		<vector2 name="57/shape_offset"> 8, 8 </vector2>
+		<array name="57/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://41">  </resource>
+		</array>
+		<vector2 name="57/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="57/one_way_collision_max_depth"> 0 </real>
+		<string name="58/name"> "TestTileset58" </string>
+		<resource name="58/texture" external="0">  </resource>
+		<vector2 name="58/tex_offset"> 0, 0 </vector2>
+		<resource name="58/material"></resource>		<color name="58/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="58/region"> 32, 112, 16, 16 </rect2>
+		<vector2 name="58/occluder_offset"> 8, 8 </vector2>
+		<resource name="58/occluder"></resource>		<vector2 name="58/navigation_offset"> 8, 8 </vector2>
+		<resource name="58/navigation"></resource>		<vector2 name="58/shape_offset"> 8, 8 </vector2>
+		<array name="58/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://42">  </resource>
+		</array>
+		<vector2 name="58/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="58/one_way_collision_max_depth"> 0 </real>
+		<string name="59/name"> "TestTileset59" </string>
+		<resource name="59/texture" external="0">  </resource>
+		<vector2 name="59/tex_offset"> 0, 0 </vector2>
+		<resource name="59/material"></resource>		<color name="59/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="59/region"> 48, 112, 16, 16 </rect2>
+		<vector2 name="59/occluder_offset"> 8, 8 </vector2>
+		<resource name="59/occluder"></resource>		<vector2 name="59/navigation_offset"> 8, 8 </vector2>
+		<resource name="59/navigation"></resource>		<vector2 name="59/shape_offset"> 0, 0 </vector2>
+		<array name="59/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="59/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="59/one_way_collision_max_depth"> 0 </real>
+		<string name="60/name"> "TestTileset60" </string>
+		<resource name="60/texture" external="0">  </resource>
+		<vector2 name="60/tex_offset"> 0, 0 </vector2>
+		<resource name="60/material"></resource>		<color name="60/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="60/region"> 64, 112, 16, 16 </rect2>
+		<vector2 name="60/occluder_offset"> 8, 8 </vector2>
+		<resource name="60/occluder"></resource>		<vector2 name="60/navigation_offset"> 8, 8 </vector2>
+		<resource name="60/navigation"></resource>		<vector2 name="60/shape_offset"> 0, 0 </vector2>
+		<array name="60/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="60/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="60/one_way_collision_max_depth"> 0 </real>
+		<string name="61/name"> "TestTileset61" </string>
+		<resource name="61/texture" external="0">  </resource>
+		<vector2 name="61/tex_offset"> 0, 0 </vector2>
+		<resource name="61/material"></resource>		<color name="61/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="61/region"> 80, 112, 16, 16 </rect2>
+		<vector2 name="61/occluder_offset"> 8, 8 </vector2>
+		<resource name="61/occluder"></resource>		<vector2 name="61/navigation_offset"> 8, 8 </vector2>
+		<resource name="61/navigation"></resource>		<vector2 name="61/shape_offset"> 0, 0 </vector2>
+		<array name="61/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="61/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="61/one_way_collision_max_depth"> 0 </real>
+		<string name="62/name"> "TestTileset62" </string>
+		<resource name="62/texture" external="0">  </resource>
+		<vector2 name="62/tex_offset"> 0, 0 </vector2>
+		<resource name="62/material"></resource>		<color name="62/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="62/region"> 96, 112, 16, 16 </rect2>
+		<vector2 name="62/occluder_offset"> 8, 8 </vector2>
+		<resource name="62/occluder"></resource>		<vector2 name="62/navigation_offset"> 8, 8 </vector2>
+		<resource name="62/navigation"></resource>		<vector2 name="62/shape_offset"> 0, 0 </vector2>
+		<array name="62/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="62/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="62/one_way_collision_max_depth"> 0 </real>
+		<string name="63/name"> "TestTileset63" </string>
+		<resource name="63/texture" external="0">  </resource>
+		<vector2 name="63/tex_offset"> 0, 0 </vector2>
+		<resource name="63/material"></resource>		<color name="63/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="63/region"> 112, 112, 16, 16 </rect2>
+		<vector2 name="63/occluder_offset"> 8, 8 </vector2>
+		<resource name="63/occluder"></resource>		<vector2 name="63/navigation_offset"> 8, 8 </vector2>
+		<resource name="63/navigation"></resource>		<vector2 name="63/shape_offset"> 8, 8 </vector2>
+		<array name="63/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://43">  </resource>
+		</array>
+		<vector2 name="63/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="63/one_way_collision_max_depth"> 0 </real>
+
+	</main_resource>
+</resource_file>

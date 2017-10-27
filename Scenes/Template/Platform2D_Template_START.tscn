@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://Scripts/Viewport.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Tiled_Scenes/Tiled_TestLevel.scn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Player/Platform2DPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Hud/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/SoundFX/SoundFX_Player.tscn" type="PackedScene" id=5]
+
+[node name="Main" type="Node2D"]
+
+script/script = ExtResource( 1 )
+smoothFollow = true
+smoothSpeed = 5.0
+useCamera = true
+
+[node name="Tiled_TestLevel" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 98, 206 )
+playerMaxSpeed = 100
+jumpForce = 300
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="SoundFX" parent="." instance=ExtResource( 5 )]
+
+
+[editable path="Tiled_TestLevel"]
+[editable path="Player"]

@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://Prefabs/Player/Platform2DPlayerController.gd" type="Script" id=1]
+[ext_resource path="res://Animations/Player/Soso/PlayerAnimation.scn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/SoundFX/SoundFX_Player.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5.73942, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5.73942, 7 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 4.0
+height = 10.0
+
+[node name="Player" type="KinematicBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 6 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 9 )
+shapes/1/trigger = true
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+playerMaxSpeed = 200
+acceleration = 0.2
+jumpForce = 200
+jumpTreshold = 0.2
+
+[node name="PlayerAnimation" parent="." instance=ExtResource( 2 )]
+
+[node name="PlayerShapeWalk" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0, 6 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="PlayerShapeCrunch" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0, 9 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 1
+
+[node name="FireOrigin_RIGHT" type="Position2D" parent="."]
+
+transform/pos = Vector2( 16, 10 )
+
+[node name="TriggerDetector" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 5 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerDetector"]
+
+transform/pos = Vector2( 0, 5 )
+shape = SubResource( 3 )
+trigger = true
+_update_shape_index = 0
+
+[node name="PlayerSoundFX" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 0, 1 )
+
+[connection signal="area_enter" from="TriggerDetector" to="." method="_on_TriggerDetector_area_enter"]
+
+[connection signal="area_exit" from="TriggerDetector" to="." method="_on_TriggerDetector_area_exit"]
+
+
+[editable path="PlayerAnimation"]
