@@ -3,6 +3,8 @@ extends Node
 # Movement facing state
 enum eFacing { TO_LEFT, TO_RIGHT}
 
+enum eDirection { IDLE = 0,TO_LEFT = -1, TO_RIGHT=1, TO_UP = -1, TO_DOWN = 1 }
+
 # Action state
 #enum eActionState { FIRE, THROW, STAB, USE }
 

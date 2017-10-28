@@ -45,6 +45,8 @@ func GetState(moveControl):
 	if moveControl.jumping and moveControl.velocity.y<0: 
 		animation_state = Global.eAnimState.JUMP
 	
+	if moveControl.inHurt: animation_state = Global.eAnimState.HURT
+	
 	return animation_state
 
 # -----------------------------------------------------------
@@ -57,6 +59,7 @@ func Play(state):
 	if state==Global.eAnimState.WALK: _anim_name = "Walk"
 	if state==Global.eAnimState.JUMP: _anim_name = "Jump"
 	if state==Global.eAnimState.FALL: _anim_name = "Fall"
+	if state==Global.eAnimState.HURT: _anim_name = "Hurt"
 	if state==Global.eAnimState.CRUNCH: _anim_name = "Crunch"
 	if state==Global.eAnimState.CRUNCHWALK: _anim_name = "CrunchWalk"
 	

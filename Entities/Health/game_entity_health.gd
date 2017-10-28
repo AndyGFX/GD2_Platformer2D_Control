@@ -12,7 +12,9 @@ func _get_item_rect():
 func _ready():
 	pass
 
+# ---------------------------------------------------------
 # pickup item method which is called from area detector assigned on player
+# ---------------------------------------------------------
 func PickupHealth():
 	if !has_node("/root/Inventory"): return
 	get_node("/root/Inventory").AddWithLimitCheck(item_type,item_amount,item_limit);

@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Prefabs/Enemies/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Animations/Enemies/Enemy_0.scn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Enemies/EnemyCollision.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6, 5 )
+
+[node name="Enemy-H-movement" type="KinematicBody2D"]
+
+input/pickable = true
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+enemyMaxSpeed = 10
+acceleration = 0.2
+health = 100
+
+[node name="CastLeft" type="RayCast2D" parent="."]
+
+transform/pos = Vector2( -11, 6 )
+enabled = true
+cast_to = Vector2( 0, 2 )
+layer_mask = 1
+type_mask = 15
+
+[node name="CastRight" type="RayCast2D" parent="."]
+
+transform/pos = Vector2( 11, 6 )
+enabled = true
+cast_to = Vector2( 0, 2 )
+layer_mask = 1
+type_mask = 15
+
+[node name="Animation" parent="." instance=ExtResource( 2 )]
+
+[node name="Trigger" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 3 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Trigger"]
+
+transform/pos = Vector2( 0, 3 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[connection signal="area_enter" from="Trigger" to="Trigger" method="_on_Player_area_enter"]
+
+[connection signal="body_enter" from="Trigger" to="." method="_on_Bullet_body_enter"]
+
+
+[editable path="Animation"]

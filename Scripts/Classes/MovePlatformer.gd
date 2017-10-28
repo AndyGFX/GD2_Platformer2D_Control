@@ -18,9 +18,14 @@ var facing = Global.eFacing.TO_RIGHT
 var world_gravity = Vector2(0,1000)
 var jumpForce = 400
 var jumpTreshold = 0.2
+
+# -----------------------------------------------------------
+# Movement states
+# -----------------------------------------------------------
 var isOnGround = false
 var inMotion = false
 var inCrunch = false
+var inHurt = false
 var jumping = false
 
 
@@ -81,12 +86,12 @@ func Apply(delta):
 	if key_1.IsHold():
 		movement = -1
 		facing = Global.eFacing.TO_LEFT
-		
+
 	# key check for move RIGHT
 	if key_2.IsHold():
 		movement = 1
 		facing = Global.eFacing.TO_RIGHT
-		
+
 	# key check for toggle CRUNCH
 	if key_4.IsPressed():
 		inCrunch = !inCrunch;
@@ -96,12 +101,6 @@ func Apply(delta):
 		else:
 			_shape_walk.set_trigger(false)
 			_shape_crunch.set_trigger(true)
-	
-#	# key check for CRUNCH end
-#	if key_4.IsReleased():
-#		inCrunch = false;
-#		_shape_walk.set_trigger(false)
-#		_shape_crunch.set_trigger(true)
 
 	movement*=speed
 
@@ -123,6 +122,7 @@ func Apply(delta):
 
 	if velocity.y > 0:
 		jumping = false
+		inHurt = false
 
 	if velocity.y!=0 or velocity.x != 0: inMotion = true;
 
@@ -167,3 +167,16 @@ func SetSpeed(new_speed):
 # -----------------------------------------------------------
 func RestoreSpeed():
 	self.speed = _stored_speed
+
+# -----------------------------------------------------------
+# Reverse move on damage
+# -----------------------------------------------------------
+func Hurt(dir):
+
+	_is_enabled = true
+	jumping = true
+	inHurt = true
+	velocity.y -= jumpForce/2
+	_jump_timer = jumpTreshold
+	velocity.x = dir.x*10
+	object.move_and_slide(velocity,FLOOR_NORMAL,SLOPE_FRICTION)

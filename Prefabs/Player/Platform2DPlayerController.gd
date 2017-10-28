@@ -228,3 +228,9 @@ func _on_TriggerDetector_area_exit( area ):
 	# show message info on enter trigger zone
 	if area.has_method('ExitFromMsgZone'):
 		msg_info.Hide()
+		
+
+func Damage(val,direction):
+	Inventory.Add("health",-val);
+	move.Hurt(direction)
+

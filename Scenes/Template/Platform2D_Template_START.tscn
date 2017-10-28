@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://Scripts/Viewport.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tiled_Scenes/Tiled_TestLevel.scn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Player/Platform2DPlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Hud/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/SoundFX/SoundFX_Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Enemies/Enemy_0.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Node2D"]
 
@@ -19,11 +20,14 @@ editor/display_folded = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 98, 206 )
 playerMaxSpeed = 100
 jumpForce = 300
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
+
+editor/display_folded = true
 
 [node name="Frame" parent="HUD/HUD_Coins"]
 
@@ -42,6 +46,10 @@ modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
 modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
 
 [node name="SoundFX" parent="." instance=ExtResource( 5 )]
+
+[node name="Enemy-H-movement" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 99, 312 )
 
 
 [editable path="Player"]
