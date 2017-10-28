@@ -25,7 +25,24 @@ jumpForce = 300
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 
+[node name="Frame" parent="HUD/HUD_Coins"]
+
+modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+
+[node name="Frame" parent="HUD/HUD_XP"]
+
+modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+
+[node name="Frame" parent="HUD/HUD_Health"]
+
+modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+
+[node name="Frame" parent="HUD/HUD_Ammo"]
+
+modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+
 [node name="SoundFX" parent="." instance=ExtResource( 5 )]
 
 
 [editable path="Player"]
+[editable path="HUD"]
