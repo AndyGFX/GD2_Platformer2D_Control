@@ -8,7 +8,6 @@
 
 [node name="Main" type="Node2D"]
 
-editor/display_folded = true
 script/script = ExtResource( 1 )
 smoothFollow = true
 smoothSpeed = 5.0
@@ -20,7 +19,6 @@ editor/display_folded = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 98, 206 )
 playerMaxSpeed = 100
 jumpForce = 300

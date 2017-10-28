@@ -41,7 +41,6 @@ func attach(src_node, src_signal, trg_node, trg_func):
 	pass
 
 func remote_call(src_node, method, arg0 = null, arg1 = null):
-	src_node = find_node(src_node)
 	
 	if src_node and src_node.has_method(method):
 		if arg0 and arg1:

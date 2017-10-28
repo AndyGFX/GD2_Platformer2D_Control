@@ -1,5 +1,12 @@
 extends Node2D
 
+# best choise for screen resolution:
+#	256x144
+#	384x216
+#	512x288
+#	640x360
+#	768x432
+
 onready var screen_size = Vector2(Globals.get("display/width"), Globals.get("display/height"))
 onready var player = get_node("Player")
 onready var HUD = get_node("HUD")
@@ -26,6 +33,8 @@ func _ready():
 		cam = Camera2D.new()
 		player.add_child(cam)
 		cam.make_current()
+		cam.set_name("Camera")
+		cam.set_script(load("res://Scripts/Classes/Camera.gd"))
 
 		if smoothFollow:
 			cam.set_follow_smoothing(smoothSpeed)
