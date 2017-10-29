@@ -378,7 +378,7 @@ func build():
 
 			if typeof(image) == TYPE_STRING:
 				return image
-
+			
 			sprite.set_texture(image)
 			sprite.set_opacity(opacity)
 			sprite.set_hidden(not visible)

@@ -10,6 +10,7 @@ extents = Vector2( 10, 10 )
 
 [node name="Teleport" type="Area2D"]
 
+transform/pos = Vector2( 0, -16 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
