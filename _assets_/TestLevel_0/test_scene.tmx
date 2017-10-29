@@ -16,9 +16,21 @@
   </data>
  </layer>
  <objectgroup name="Enemies">
-  <object id="35" name="Enemy" type="ENEMY_H" gid="105" x="494" y="160" width="16" height="16"/>
-  <object id="36" name="Enemy" type="ENEMY_H" gid="105" x="256" y="240" width="16" height="16"/>
-  <object id="37" name="Enemy" type="ENEMY_H" gid="105" x="96" y="320" width="16" height="16"/>
+  <object id="35" name="Enemy" type="ENEMY_H" gid="105" x="494" y="160" width="16" height="16">
+   <properties>
+    <property name="item_id" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="36" name="Enemy" type="ENEMY_H" gid="105" x="256" y="240" width="16" height="16">
+   <properties>
+    <property name="item_id" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="37" name="Enemy" type="ENEMY_H" gid="105" x="96" y="320" width="16" height="16">
+   <properties>
+    <property name="item_id" type="int" value="1"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Entities">
   <object id="5" name="Coin" type="COIN" gid="67" x="304" y="416" width="16" height="16">

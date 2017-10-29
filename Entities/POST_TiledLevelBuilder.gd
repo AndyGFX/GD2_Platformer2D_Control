@@ -48,7 +48,9 @@ var ent_teleport = [
 	load("res://Entities/Teleport/Entity_Teleport_2.tscn"),
 	load("res://Entities/Teleport/Entity_Teleport_3.tscn")]
 
-var ent_enemy_h = [load("res://Entities/Enemies/Enemy_H/Entity_Enemy_0.tscn")]
+var ent_enemy_h = [
+	load("res://Entities/Enemies/Enemy_H/Entity_Enemy_0.tscn"),
+	load("res://Entities/Enemies/Enemy_H/Entity_Enemy_1.tscn")]
 
 # ---------------------------------------------------------------------
 # Traverse the node tree and replace Tiled objects and Nodes

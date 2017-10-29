@@ -26,7 +26,7 @@ func _ready():
 	set_fixed_process(true)
 	rayLeft = get_node("CastLeft");
 	rayRight = get_node("CastRight");
-	animPlayer = get_node("Animation/AnimationPlayer");
+	animPlayer = get_node("Enemy/AnimationPlayer");
 	add_to_group("ENEMY")
 	connect("area_enter", self, "_on_area_enter")
 	connect("body_enter", self, "_on_body_enter")
