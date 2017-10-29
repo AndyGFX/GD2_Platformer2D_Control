@@ -16,8 +16,6 @@ useCamera = true
 
 [node name="Tiled_TestLevel" parent="." instance=ExtResource( 2 )]
 
-editor/display_folded = true
-
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
 editor/display_folded = true
@@ -50,7 +48,10 @@ modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
 [node name="Enemy-H-movement" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 99, 312 )
+speed = 25
+velocity = Vector2( 0, 0 )
 
 
+[editable path="Tiled_TestLevel"]
 [editable path="Player"]
 [editable path="HUD"]

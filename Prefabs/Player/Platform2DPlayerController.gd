@@ -41,6 +41,8 @@ func _get_item_rect():
 # ---------------------------------------------------------
 func _ready():
 
+	add_to_group("PLAYER")
+	
 	# find container instance in scene
 	container =  Utils.find_node("Container")
 

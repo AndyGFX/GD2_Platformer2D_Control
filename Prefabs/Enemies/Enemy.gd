@@ -1,24 +1,21 @@
-extends KinematicBody2D
+extends Area2D
 
-const scn_explosion = [ 
+const scn_explosion = [
 	preload("res://Prefabs/Explosion/explosion_0.tscn"),
 	preload("res://Prefabs/Explosion/explosion_1.tscn"),
 	preload("res://Prefabs/Explosion/explosion_2.tscn")
 	]
 
-var cMove = preload("res://Scripts/Classes/MoveEnemyHorizontaly.gd")
-var cAnim = preload("res://Scripts/Classes/AnimationState.gd")
-
 var enemy = null;
 var rayLeft = null;
 var rayRight = null;
+var animPlayer = null;
+var current_animation = ""
 
-var move =null;
-var anim =null;
-
-export var enemyMaxSpeed = 10
-export var acceleration = 0.2
-export var health = 100
+export var armor = 100
+export var damage = 10
+export var speed = 25
+export var velocity = Vector2(0,0)
 
 # ---------------------------------------------------------
 # Initialize on start
@@ -26,46 +23,91 @@ export var health = 100
 func _ready():
 
 	enemy = get_node(".")
-
 	set_fixed_process(true)
 	rayLeft = get_node("CastLeft");
 	rayRight = get_node("CastRight");
-	move = cMove.new(enemy,rayLeft,rayRight,enemyMaxSpeed)
-	anim = cAnim.new(get_node("Animation/AnimationPlayer"))
+	animPlayer = get_node("Animation/AnimationPlayer");
+	add_to_group("ENEMY")
+	connect("area_enter", self, "_on_area_enter")
+	connect("body_enter", self, "_on_body_enter")
+	Start()
+	
+func set_armor(new_value):
 
+	if is_queued_for_deletion(): return
+
+	armor -= new_value
+	
+	if armor <= 0:
+		create_explosion()
+		queue_free()
+	pass
+
+# ---------------------------------------------------------
+# On AREA hit
+# ---------------------------------------------------------
+func _on_area_enter(other):
+	if other.is_in_group("PLAYER"):
+		other.Damage(damage,velocity)
+		queue_free()
+	
+# ---------------------------------------------------------
+# On BODY hit
+# ---------------------------------------------------------
+func _on_body_enter(body):
+	if body.is_in_group("PLAYER"):
+		body.Damage(10,velocity)
+	
 # ---------------------------------------------------------
 # On Fixed Update
 # ---------------------------------------------------------
 func _fixed_process(delta):
 
-	# realize movement
-	self.move.Apply(delta)
+	if velocity.x!=0:
+		#switch move to left
+		if (rayLeft.is_colliding() and !rayRight.is_colliding()):
+			velocity.x = -velocity.x
+			self.scale(Vector2(-1,1))
+			
+		#switch move to right
+		if (!rayLeft.is_colliding() and rayRight.is_colliding()):
+			velocity.x = -velocity.x
+			self.scale(Vector2(1,1))
 
-	# get animation state and store result
-	var playerAnimState = anim.GetState(move)
-
-	# play animation
-	anim.Play(playerAnimState)
+	translate(velocity * delta)
+	
+	pass
 
 # ---------------------------------------------------------
 # Create collision
 # ---------------------------------------------------------
 func create_explosion():
-	
-	var idx = int(round(rand_range(0,2)))	
+
+	var idx = int(round(rand_range(0,2)))
 	var explosion = scn_explosion[idx].instance()
 	explosion.set_pos(get_pos())
 	Utils.main_node.add_child(explosion)
 	pass
+	
+# ---------------------------------------------------------
+# Play animation byname
+# ---------------------------------------------------------
+func PlayAnimation(anim_name):		
+		if current_animation != anim_name:
+			animPlayer.play(anim_name)
+			current_animation = anim_name
+			
 
 # ---------------------------------------------------------
-# On bullet hit decrease enemy health and create explosion
+# Start enemy movement
 # ---------------------------------------------------------
-func _on_Bullet_body_enter( body ):
+func Start():
+	velocity.x = speed
+	PlayAnimation("Walk")
 	
-	if (body.get_name()=="Bullet"):		
-		create_explosion()
-		self.health -= body.bulletDamage
-		body.free()
-		if self.health<0:
-			queue_free()
+# ---------------------------------------------------------
+# Stop enemy movement
+# ---------------------------------------------------------
+func Stop():
+	velocity.x = 0	
+	PlayAnimation("Idle")

@@ -8,17 +8,20 @@
 custom_solver_bias = 0.0
 extents = Vector2( 4, 4 )
 
-[node name="Bullet" type="KinematicBody2D"]
+[node name="Bullet" type="Area2D"]
 
 z/z = 100
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
 collision/layers = 2
-collision/mask = 1
-collision/margin = 0.08
 script/script = ExtResource( 1 )
+bulletDamage = 25
 bulletSpeed = 400
 bulletFireSFX = "Shoot1"
 
@@ -31,7 +34,7 @@ region_rect = Rect2( 48, 0, 16, 16 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 shape = SubResource( 1 )
-trigger = false
+trigger = true
 _update_shape_index = 0
 
 

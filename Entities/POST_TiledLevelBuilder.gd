@@ -61,7 +61,12 @@ func post_import(scene):
 		if node extends TileMap:
 			# Process tile layers. E.g. read the ID of the individual tiles and
 			# replace them with random variations, or instantiate scenes on top of them
-			pass
+			if node.has_meta("TYPE"):
+				var type = node.get_meta("TYPE")
+
+				if type == "SOLID":
+					node.add_to_group("SOLID",true)
+
 		if node extends Node2D:
 			for object in node.get_children():
 
@@ -280,7 +285,7 @@ func Dump(obj,prop):
 # -------------------------------------------------------
 func Check(obj,prop,val):
 	if !obj.has_meta(prop): obj.set_meta(prop,val)
-	
+
 # -------------------------------------------------------
 # Build and replace objects in scene
 # -------------------------------------------------------
