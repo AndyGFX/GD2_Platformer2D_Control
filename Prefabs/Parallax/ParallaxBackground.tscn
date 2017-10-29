@@ -19,6 +19,8 @@ scroll/ignore_camera_zoom = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
+editor/display_folded = true
+transform/pos = Vector2( 0, 141 )
 motion/scale = Vector2( 1, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 320, 0 )
@@ -41,7 +43,9 @@ region_rect = Rect2( 0, 0, 320, 400 )
 
 [node name="ParallaxLayer1" type="ParallaxLayer" parent="."]
 
-motion/scale = Vector2( 0.8, 1 )
+editor/display_folded = true
+transform/pos = Vector2( 0, 141 )
+motion/scale = Vector2( 0.8, 0.8 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 320, 0 )
 
@@ -63,7 +67,9 @@ region_rect = Rect2( 0, 0, 320, 400 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 
-motion/scale = Vector2( 1, 1 )
+editor/display_folded = true
+transform/pos = Vector2( 0, 141 )
+motion/scale = Vector2( 0.5, 0.5 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 320, 0 )
 
