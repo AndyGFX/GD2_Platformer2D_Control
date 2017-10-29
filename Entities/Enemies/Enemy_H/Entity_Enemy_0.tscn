@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://Prefabs/Enemies/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Enemies/Enemy_H/Enemy_H.gd" type="Script" id=1]
 [ext_resource path="res://Animations/Enemies/Enemy_0.scn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -22,7 +22,7 @@ script/script = ExtResource( 1 )
 armor = 100
 damage = 10
 speed = 25
-velocity = Vector2( 50, 0 )
+velocity = Vector2( 0, 0 )
 
 [node name="CastLeft" type="RayCast2D" parent="."]
 

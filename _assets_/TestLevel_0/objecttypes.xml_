@@ -55,4 +55,10 @@
   <property name="teleport_type" type="int" default="0"/>
  </objecttype>
  <objecttype name="occluder" color="#f5f5ff"/>
+ <objecttype name="ENEMY_H" color="#ff0000">
+  <property name="armor" type="int" default="50"/>
+  <property name="damage" type="int" default="10"/>
+  <property name="item_id" type="int" default="0"/>
+  <property name="speed" type="int" default="20"/>
+ </objecttype>
 </objecttypes>
