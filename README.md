@@ -70,17 +70,19 @@ Show info on enter door trigger
         - pickup powerup gravity vector (0,500)
         - teleport to second linked teleport by name
         - pickup key
+        - damage by enemy
+        - destroy enemy
         - bullet explosion
         - teleport with requested key
         - show info when player enter to teleport area
         - show message info text on enter sign tile
+        - enemies
 
     
 # ToDo:
 
 - die
 - pull/push
-- enemies
 - add check if any powerup is executed
 - add option for use only one powerup in time
 - add automatic save point with respawn on last save point when scene load
