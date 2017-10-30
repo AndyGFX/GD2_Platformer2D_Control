@@ -1,56 +1,5 @@
-extends Node
+extends "res://Entities/POST_EntitiesItemsDefintion.gd"
 
-# ---------------------------------------------------------------------
-# entity type as list - item is defined via item_id
-# ---------------------------------------------------------------------
-
-var ent_coin = [
-	load("res://Entities/Coin/Entity_Coin_0.tscn"),
-	load("res://Entities/Coin/Entity_Coin_1.tscn"),
-	load("res://Entities/Coin/Entity_Coin_2.tscn"),
-	load("res://Entities/Coin/Entity_Coin_3.tscn")]
-
-var ent_key = [
-	load("res://Entities/Key/Entity_Key_0.tscn"),
-	load("res://Entities/Key/Entity_Key_1.tscn"),
-	load("res://Entities/Key/Entity_Key_2.tscn"),
-	load("res://Entities/Key/Entity_Key_3.tscn")]
-
-var ent_ammo = [
-	load("res://Entities/Ammo/Entity_Ammo_0.tscn"),
-	load("res://Entities/Ammo/Entity_Ammo_1.tscn"),
-	load("res://Entities/Ammo/Entity_Ammo_2.tscn"),
-	load("res://Entities/Ammo/Entity_Ammo_3.tscn")]
-
-var ent_health = [
-	load("res://Entities/Health/Entity_Health_0.tscn"),
-	load("res://Entities/Health/Entity_Health_1.tscn"),
-	load("res://Entities/Health/Entity_Health_2.tscn"),
-	load("res://Entities/Health/Entity_Health_3.tscn")]
-
-
-var ent_gravity = [load("res://Entities/PowerUp_Gravity/Entity_PowerUpGravity_0.tscn")]
-
-var ent_jump = [load("res://Entities/PowerUp_Jump/Entity_PowerUpJump_0.tscn")]
-
-var ent_speed = [load("res://Entities/PowerUp_Speed/Entity_PowerUpSpeed_0.tscn")]
-
-var ent_infomsg = [load("res://Entities/InfoMsg/Entity_InfoMsg_0.tscn")]
-
-var ent_startpoint = [load("res://Entities/StartPoint/Entity_StartPoint_0.tscn")]
-
-var ent_endpoint = [load("res://Entities/EndPoint/Entity_EndPoint_0.tscn")]
-
-
-var ent_teleport = [
-	load("res://Entities/Teleport/Entity_Teleport_0.tscn"),
-	load("res://Entities/Teleport/Entity_Teleport_1.tscn"),
-	load("res://Entities/Teleport/Entity_Teleport_2.tscn"),
-	load("res://Entities/Teleport/Entity_Teleport_3.tscn")]
-
-var ent_enemy_h = [
-	load("res://Entities/Enemies/Enemy_H/Entity_Enemy_0.tscn"),
-	load("res://Entities/Enemies/Enemy_H/Entity_Enemy_1.tscn")]
 
 # ---------------------------------------------------------------------
 # Traverse the node tree and replace Tiled objects and Nodes
@@ -153,6 +102,19 @@ func CheckProperties(obj):
 		Check(obj,"item_id",0)
 		Check(obj,"damage",10)
 		Check(obj,"speed",20)
+
+	if type == "SWITCH":
+		Check(obj,"item_id",0)
+		Check(obj,"callback","<undefined>")
+		Check(obj,"key_name","up_key")
+		Check(obj,"set_state",true)
+		Check(obj,"switch_mode","OnEnter")   # OnEnter / OnKey
+		Check(obj,"target_name","<undefined>")
+
+	if type == "LIGHT":		
+		Check(obj,"item_id",0)
+		Check(obj,"color","#ffffffff")
+		
 	return obj
 
 # ---------------------------------------------------------
@@ -292,6 +254,25 @@ func DumpProperties(obj):
 		Dump(obj,"item_id")
 		Dump(obj,"damage")
 		Dump(obj,"speed")
+
+	if type == "SWITCH":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"item_id")
+		Dump(obj,"callback")
+		Dump(obj,"key_name")
+		Dump(obj,"set_state")
+		Dump(obj,"switch_mode")
+		Dump(obj,"target_name")
+
+	if type == "LIGHT":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"item_id")
+		Dump(obj,"color")
+
 # -------------------------------------------------------
 # Helpert for dump entity property to console
 # -------------------------------------------------------
@@ -322,7 +303,9 @@ func BuildEntity(scene,node,obj):
 	if type == "END_POINT": Entity_ENDPOINT(scene,node,obj)
 	if type == "TELEPORT": Entity_TELEPORT(scene,node,obj)
 	if type == "ENEMY_H": Entity_ENEMY_H(scene,node,obj)
-	
+	if type == "SWITCH": Entity_SWITCH(scene,node,obj)
+	if type == "LIGHT": Entity_LIGHT(scene,node,obj)
+
 
 # -------------------------------------------------------
 # COIN
@@ -656,8 +639,8 @@ func Entity_TELEPORT(scene,node,obj):
 	# add to scene under parent
 	node.add_child(teleport)
 	teleport.set_owner(scene)
-	
-	
+
+
 # -------------------------------------------------------
 # ENEMY with HORIZONTAL MOVE
 # -------------------------------------------------------
@@ -672,7 +655,7 @@ func Entity_ENEMY_H(scene,node,obj):
 	var speed = obj.get_meta("speed")
 	var armor = obj.get_meta("armor")
 	var damage = obj.get_meta("damage")
-	
+
 	var pos = obj.get_pos()
 	var name = obj.get_name()
 
@@ -687,11 +670,89 @@ func Entity_ENEMY_H(scene,node,obj):
 	enemy.speed = speed
 	enemy.armor = armor
 	enemy.damage = damage
-	
+
 	# set name and position
 	enemy.set_name(name)
 	enemy.set_pos(pos)
 
 	# add to scene under parent
 	node.add_child(enemy)
-	enemy.set_owner(scene)	
+	enemy.set_owner(scene)
+
+# -------------------------------------------------------
+# SWITCH: call defiend method on node with defined state OnEnter o OnKeyPressed
+# -------------------------------------------------------
+
+func Entity_SWITCH(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+
+	if item_id>ent_switch.size():
+		print("ERROR: SWITCH item ID > "+str(ent_switch.size()))
+
+	# read meta data
+
+	var callback = obj.get_meta("callback")
+	var key_name = obj.get_meta("key_name")
+	var set_state = obj.get_meta("set_state")
+	var switch_mode = obj.get_meta("switch_mode")
+	var target_name = obj.get_meta("target_name")
+
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var sw = ent_switch[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+
+	sw.callback = callback
+	sw.key_name = key_name
+	sw.set_state = set_state
+	sw.switch_mode = switch_mode
+	sw.target_name = target_name
+
+	# set name and position
+	sw.set_name(name)
+	sw.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(sw)
+	sw.set_owner(scene)
+	
+# -------------------------------------------------------
+# INFO MSG TEXT
+# -------------------------------------------------------
+func Entity_LIGHT(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_light.size()):
+		print("ERROR: INFO MSG item ID > "+str(ent_light.size()))
+
+	# read meta data
+	var color = obj.get_meta("color")
+	print(str(color))
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var light = ent_light[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+	light.set_color(color)
+	
+
+	# set name and position
+	light.set_name(name)
+	light.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(light)
+	light.set_owner(scene)	
+	
