@@ -1,0 +1,129 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Resources/Theme/Platformer2D_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Resources/Theme/MenuBackground.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/pixelmix_n_8.fnt" type="BitmapFont" id=3]
+
+[node name="Platformer2D-Title" type="Control"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 472.0
+margin/bottom = 248.0
+texture = ExtResource( 2 )
+modulate = Color( 0.586898, 0.586075, 0.691406, 1 )
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 349.0
+margin/top = 81.0
+margin/right = 474.0
+margin/bottom = 199.0
+custom_constants/separation = 5
+alignment = 0
+
+[node name="Button-PLAY" type="Button" parent="VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 125.0
+margin/bottom = 32.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Play"
+flat = false
+clip_text = true
+align = 2
+
+[node name="Button-OPTION" type="Button" parent="VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 37.0
+margin/right = 125.0
+margin/bottom = 69.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Options"
+flat = false
+clip_text = true
+align = 2
+
+[node name="Button-EXIT" type="Button" parent="VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 74.0
+margin/right = 125.0
+margin/bottom = 106.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Exit"
+flat = false
+clip_text = true
+align = 2
+
+[node name="Label" type="Label" parent="."]
+
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 3.0
+margin/top = 19.0
+margin/right = 4.0
+margin/bottom = 0.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Godot 2.1.4 - Platformer2D game template - AndyGFX 2017  "
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

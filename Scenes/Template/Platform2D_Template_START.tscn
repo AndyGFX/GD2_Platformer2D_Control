@@ -9,6 +9,7 @@
 
 [node name="Main" type="Node2D"]
 
+editor/display_folded = true
 script/script = ExtResource( 1 )
 smoothFollow = true
 smoothSpeed = 5.0
