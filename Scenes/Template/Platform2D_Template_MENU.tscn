@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Resources/Theme/Platformer2D_theme.tres" type="Theme" id=1]
-[ext_resource path="res://Scenes/Platformer2D-Menu.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Template/Platformer2D-Menu.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Theme/MenuBackground.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/pixelmix_n_8.fnt" type="BitmapFont" id=4]
 
-[node name="Platformer2D-Title" type="Control"]
+[node name="Platformer2D-MENU" type="Control"]
 
 anchor/right = 1
 anchor/bottom = 1
