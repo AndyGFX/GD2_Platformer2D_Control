@@ -16,12 +16,6 @@ useCamera = true
 
 [node name="Tiled_TestLevel" parent="." instance=ExtResource( 2 )]
 
-editor/display_folded = true
-
-[node name="Layer-BACK" parent="Tiled_TestLevel"]
-
-visibility/visible = false
-
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
 editor/display_folded = true

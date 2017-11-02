@@ -23,6 +23,7 @@ tracks/0/keys = {
 
 [node name="Platformer2D-TITLE" type="Control"]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
