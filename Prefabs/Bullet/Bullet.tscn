@@ -21,7 +21,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 collision/layers = 2
 script/script = ExtResource( 1 )
-bulletDamage = 25
+bulletDamage = 5
 bulletSpeed = 400
 bulletFireSFX = "Shoot1"
 

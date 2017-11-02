@@ -6,11 +6,15 @@ const scn_explosion = [
 	preload("res://Prefabs/Explosion/explosion_2.tscn")
 	]
 
+const hit_point = preload("res://Prefabs/Hud/HitPoints.tscn")
+
 var enemy = null;
 var rayLeft = null;
 var rayRight = null;
 var animPlayer = null;
 var current_animation = ""
+
+onready var container =  Utils.find_node("Container")
 
 export var armor = 100
 export var damage = 10
@@ -31,18 +35,26 @@ func _ready():
 	connect("area_enter", self, "_on_area_enter")
 	connect("body_enter", self, "_on_body_enter")
 	Start()
-	
+
 func set_armor(new_value):
 
 	if is_queued_for_deletion(): return
 
 	armor -= new_value
+	ShowHitPoints(new_value)
 	
 	if armor <= 0:
 		create_explosion()
 		queue_free()
 	pass
 
+func ShowHitPoints(val):
+	var hit = hit_point.instance()
+	hit.set_text(str(-val))
+	hit.set_pos(Vector2(100,100))	
+	add_child(hit)
+	pass
+	
 # ---------------------------------------------------------
 # On AREA hit
 # ---------------------------------------------------------
@@ -50,14 +62,14 @@ func _on_area_enter(other):
 	if other.is_in_group("PLAYER"):
 		other.Damage(damage,velocity)
 		queue_free()
-	
+
 # ---------------------------------------------------------
 # On BODY hit
 # ---------------------------------------------------------
 func _on_body_enter(body):
 	if body.is_in_group("PLAYER"):
 		body.Damage(10,velocity)
-	
+
 # ---------------------------------------------------------
 # On Fixed Update
 # ---------------------------------------------------------
@@ -68,14 +80,14 @@ func _fixed_process(delta):
 		if (rayLeft.is_colliding() and !rayRight.is_colliding()):
 			velocity.x = -velocity.x
 			self.scale(Vector2(-1,1))
-			
+
 		#switch move to right
 		if (!rayLeft.is_colliding() and rayRight.is_colliding()):
 			velocity.x = -velocity.x
 			self.scale(Vector2(1,1))
 
 	translate(velocity * delta)
-	
+
 	pass
 
 # ---------------------------------------------------------
@@ -88,15 +100,15 @@ func create_explosion():
 	explosion.set_pos(get_pos())
 	Utils.main_node.add_child(explosion)
 	pass
-	
+
 # ---------------------------------------------------------
 # Play animation byname
 # ---------------------------------------------------------
-func PlayAnimation(anim_name):		
+func PlayAnimation(anim_name):
 		if current_animation != anim_name:
 			animPlayer.play(anim_name)
 			current_animation = anim_name
-			
+
 
 # ---------------------------------------------------------
 # Start enemy movement
@@ -104,10 +116,10 @@ func PlayAnimation(anim_name):
 func Start():
 	velocity.x = speed
 	PlayAnimation("Walk")
-	
+
 # ---------------------------------------------------------
 # Stop enemy movement
 # ---------------------------------------------------------
 func Stop():
-	velocity.x = 0	
+	velocity.x = 0
 	PlayAnimation("Idle")
