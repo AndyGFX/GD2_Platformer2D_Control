@@ -40,6 +40,8 @@ jumpTreshold = 0.2
 
 [node name="PlayerAnimation" parent="." instance=ExtResource( 2 )]
 
+editor/display_folded = true
+
 [node name="PlayerShapeWalk" type="CollisionShape2D" parent="."]
 
 transform/pos = Vector2( 0, 6 )
@@ -79,6 +81,15 @@ _update_shape_index = 0
 [node name="PlayerSoundFX" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 0, 1 )
+
+[node name="ThrowDirection" type="RayCast2D" parent="."]
+
+transform/pos = Vector2( 9, -5 )
+transform/rot = 118.1
+enabled = false
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 15
 
 [connection signal="area_enter" from="TriggerDetector" to="." method="_on_TriggerDetector_area_enter"]
 

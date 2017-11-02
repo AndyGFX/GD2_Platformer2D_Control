@@ -27,7 +27,8 @@ var fire = null
 
 var teleport_info = null
 var msg_info = null
-var container = null;
+var container = null
+var throw_dir = null
 
 # signal for update viewport
 signal moveSignal
@@ -80,6 +81,8 @@ func _ready():
 
 	var fire_pivot = get_node("FireOrigin_RIGHT")
 	fire = cShooting.new(move, key_fire,Global.bullet_prefab,container,fire_pivot,false)
+
+	throw_dir = get_node("ThrowDirection");
 
 	#disable rapid fire
 
