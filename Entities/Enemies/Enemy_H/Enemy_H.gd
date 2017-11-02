@@ -14,7 +14,6 @@ var rayRight = null;
 var animPlayer = null;
 var current_animation = ""
 
-var container =  null;
 
 export var armor = 100
 export var damage = 10
@@ -34,7 +33,7 @@ func _ready():
 	add_to_group("ENEMY")
 	connect("area_enter", self, "_on_area_enter")
 	connect("body_enter", self, "_on_body_enter")
-	container =  Utils.find_node("HUD")
+	
 	Start()
 
 func set_armor(new_value):
@@ -49,11 +48,14 @@ func set_armor(new_value):
 		queue_free()
 	pass
 
+# ---------------------------------------------------------
+# Show flying hit points on enemy
+# ---------------------------------------------------------
 func ShowHitPoints(val):
+	var container =  Utils.find_node("Container")
 	var hit = hit_point.instance()
-	hit.get_node("Label").set_text(str(-val))
-	print(str(self.get_global_transform_with_canvas()))
-	hit.set_pos(self.get_global_pos())	
+	hit.get_node("Label").set_text(str(-val))	
+	hit.set_pos(self.get_global_pos())
 	container.add_child(hit)
 	pass
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://Scripts/Viewport.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tiled_Scenes/Tiled_TestLevel.scn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Prefabs/Hud/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/SoundFX/SoundFX_Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Parallax/ParallaxBackground.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Hud/HitPoints.tscn" type="PackedScene" id=7]
 
 [node name="Main" type="Node2D"]
 
@@ -56,16 +55,9 @@ transform/pos = Vector2( 203.878, 106.371 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
-[node name="Label" parent="." instance=ExtResource( 7 )]
-
-visibility/opacity = 1.0
-margin/left = 189.0
-margin/top = 179.0
-margin/right = 229.0
-margin/bottom = 193.0
+[node name="Container" type="Node2D" parent="."]
 
 
 [editable path="Tiled_TestLevel"]
 [editable path="Player"]
 [editable path="HUD"]
-[editable path="Label"]

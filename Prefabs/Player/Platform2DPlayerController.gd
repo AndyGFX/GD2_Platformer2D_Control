@@ -51,6 +51,7 @@ func _ready():
 		container = Node2D.new();
 		container.set_name("Container")
 		get_parent().call_deferred("add_child",container)
+		print("Container created ...")
 
 
 	# preload Inventory data
@@ -93,7 +94,7 @@ func _ready():
 	msg_info = Global.msg_info_panel.instance()
 	msg_info.set_global_pos(Vector2(0,-5000))
 	container.add_child(msg_info)
-
+	
 	# enable update per frame
 	set_fixed_process(true)
 
