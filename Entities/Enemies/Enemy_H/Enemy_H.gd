@@ -51,10 +51,9 @@ func set_armor(new_value):
 
 func ShowHitPoints(val):
 	var hit = hit_point.instance()
-	hit.set_text(str(-val))
-	print(str(self.get_global_pos()))
-	hit.set_pos(Vector2(100,100))
-	
+	hit.get_node("Label").set_text(str(-val))
+	print(str(self.get_global_transform_with_canvas()))
+	hit.set_pos(self.get_global_pos())	
 	container.add_child(hit)
 	pass
 	

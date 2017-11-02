@@ -1,4 +1,4 @@
-extends Control
+ extends Control
 
 var cInput = load("res://Scripts/Classes/InputManager.gd")
 var space = null
