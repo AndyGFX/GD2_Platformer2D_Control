@@ -1,0 +1,50 @@
+[gd_resource type="CanvasItemMaterial" load_steps=2 format=1]
+
+[sub_resource type="CanvasItemShader" id=1]
+
+_code = {
+"fragment": "
+uniform float radius=2.0;
+uniform float amount=0.6;
+float r = radius;
+vec2 ps = TEXTURE_PIXEL_SIZE;
+
+vec4 col = tex(TEXTURE,UV);
+
+vec4 glow = col;
+glow += tex(TEXTURE,UV+vec2(-r,-r)*ps);
+glow += tex(TEXTURE,UV+vec2(-r,0)*ps);
+glow += tex(TEXTURE,UV+vec2(-r,r)*ps);
+glow += tex(TEXTURE,UV+vec2(0,-r)*ps);
+glow += tex(TEXTURE,UV+vec2(0,r)*ps);
+glow += tex(TEXTURE,UV+vec2(r,-r)*ps);
+glow += tex(TEXTURE,UV+vec2(r,0)*ps);
+glow += tex(TEXTURE,UV+vec2(r,r)*ps);
+r*=2.0;
+glow += tex(TEXTURE,UV+vec2(-r,-r)*ps);
+glow += tex(TEXTURE,UV+vec2(-r,0)*ps);
+glow += tex(TEXTURE,UV+vec2(-r,r)*ps);
+glow += tex(TEXTURE,UV+vec2(0,-r)*ps);
+glow += tex(TEXTURE,UV+vec2(0,r)*ps);
+glow += tex(TEXTURE,UV+vec2(r,-r)*ps);
+glow += tex(TEXTURE,UV+vec2(r,0)*ps);
+glow += tex(TEXTURE,UV+vec2(r,r)*ps);
+
+glow/=17.0;
+glow*=amount;
+col.rgb*=col.a;
+COLOR=glow+col;",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+
+[resource]
+
+shader/shader = SubResource( 1 )
+shader/shading_mode = 0
+shader_param/radius = 2.0
+shader_param/amount = 0.6
+
