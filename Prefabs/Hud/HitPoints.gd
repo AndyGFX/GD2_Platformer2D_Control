@@ -1,7 +1,9 @@
 extends Label
 
 func _ready():
+	get_node("AnimationPlayer").play("FlyHitPoints")
 	get_node("AnimationPlayer").connect("finished", self, "RemoveHitPoints")
+	
 	pass
 	
 func RemoveHitPoints():

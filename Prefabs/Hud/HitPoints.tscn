@@ -24,14 +24,15 @@ tracks/1/path = NodePath(".:visibility/opacity")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 1, 1.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 1, 1.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 1.0, 0.0 ]
+"values": [ 1.0, 1.0, 0.0 ]
 }
 
 [node name="Label" type="Label"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
