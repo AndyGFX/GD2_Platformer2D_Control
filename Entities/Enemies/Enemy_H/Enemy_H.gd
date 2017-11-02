@@ -51,7 +51,7 @@ func set_armor(new_value):
 func ShowHitPoints(val):
 	var hit = hit_point.instance()
 	hit.set_text(str(-val))
-	hit.set_pos(Vector2(100,100))	
+	hit.set_pos(Vector2(0,0))	
 	add_child(hit)
 	pass
 	
