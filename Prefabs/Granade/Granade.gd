@@ -30,7 +30,7 @@ func create_explosion():
 # Check Body hit
 # ---------------------------------------------------------
 func _on_body_enter(other):		
-	print("BODY: "+other.get_name())
+	
 	if other.is_in_group("SOLID"):
 		create_explosion()
 		queue_free()

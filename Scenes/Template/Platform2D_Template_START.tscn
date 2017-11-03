@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://Scripts/Viewport.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tiled_Scenes/Tiled_TestLevel.scn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Prefabs/Hud/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/SoundFX/SoundFX_Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Parallax/ParallaxBackground.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Granade/Granade_0.tscn" type="PackedScene" id=7]
 
 [node name="Main" type="Node2D"]
 
@@ -17,21 +16,11 @@ useCamera = true
 
 [node name="Tiled_TestLevel" parent="." instance=ExtResource( 2 )]
 
-[node name="KEY_A" parent="Tiled_TestLevel/Entities"]
+editor/display_folded = true
 
-visibility/visible = false
+[node name="Enemies" parent="Tiled_TestLevel"]
 
-[node name="KEY_D" parent="Tiled_TestLevel/Entities"]
-
-visibility/visible = false
-
-[node name="KEY_C" parent="Tiled_TestLevel/Entities"]
-
-visibility/visible = false
-
-[node name="KEY_B" parent="Tiled_TestLevel/Entities"]
-
-visibility/visible = false
+editor/display_folded = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
@@ -45,10 +34,6 @@ jumpForce = 300
 editor/display_folded = true
 
 [node name="Frame" parent="HUD/HUD_Coins"]
-
-modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
-
-[node name="Frame" parent="HUD/HUD_XP"]
 
 modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
 
@@ -67,10 +52,6 @@ transform/pos = Vector2( 203.878, 106.371 )
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
 [node name="Container" type="Node2D" parent="."]
-
-[node name="Granade_0" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 144.439, 314.084 )
 
 
 [editable path="Tiled_TestLevel"]

@@ -109,6 +109,7 @@ func _ready():
 	Inventory.Set('coins',0);
 	Inventory.Set('health',100);
 	Inventory.Set('ammo',100);
+	Inventory.Set('granade',9);
 	Inventory.Set('KEY_A',false);
 	Inventory.Set('KEY_B',false);
 	Inventory.Set('KEY_C',false);

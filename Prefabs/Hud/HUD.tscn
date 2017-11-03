@@ -3,7 +3,7 @@
 [ext_resource path="res://Prefabs/Hud/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Hud/HUD-Backgroun.png" type="Texture" id=2]
 [ext_resource path="res://Entities/Coin/Coin_0.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Hud/HUD-XP.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Granade/Granade_0.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Hud/HUD-Backgroun-flip.png" type="Texture" id=5]
 [ext_resource path="res://Entities/Health/Health_0.png" type="Texture" id=6]
 [ext_resource path="res://Entities/Ammo/Ammo_3.png" type="Texture" id=7]
@@ -64,9 +64,8 @@ texture = ExtResource( 3 )
 modulate = Color( 0, 0, 0, 1 )
 stretch_mode = 0
 
-[node name="HUD_XP" type="Control" parent="."]
+[node name="HUD_GRANADE" type="Control" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -76,7 +75,7 @@ margin/top = 259.0
 margin/right = 136.0
 margin/bottom = 299.0
 
-[node name="Frame" type="TextureFrame" parent="HUD_XP"]
+[node name="Frame" type="TextureFrame" parent="HUD_GRANADE"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -89,16 +88,16 @@ margin/bottom = 40.0
 texture = ExtResource( 2 )
 stretch_mode = 0
 
-[node name="Icon" type="TextureFrame" parent="HUD_XP"]
+[node name="Icon" type="TextureFrame" parent="HUD_GRANADE"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 10.0
-margin/top = 9.0
-margin/right = 50.0
-margin/bottom = 49.0
+margin/left = 7.0
+margin/top = 5.0
+margin/right = 47.0
+margin/bottom = 45.0
 texture = ExtResource( 4 )
 modulate = Color( 0, 0, 0, 1 )
 stretch_mode = 0
@@ -222,7 +221,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label - xp" type="Label" parent="."]
+[node name="Label - granade" type="Label" parent="."]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -237,7 +236,7 @@ custom_colors/font_color = Color( 0.820313, 0.820313, 0.820313, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
-text = "XP: 000"
+text = "Granade: 3"
 align = 2
 percent_visible = 1.0
 lines_skipped = 0
