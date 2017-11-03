@@ -34,6 +34,7 @@ var powerup_gravity = preload("res://Prefabs/PowerUps/PowerUpGravity.tscn")
 
 # bullet prefab for firing
 onready var bullet_prefab = preload("res://Prefabs/Bullet/Bullet.tscn")
+onready var granade_prefab = preload("res://Prefabs/Granade/Granade_0.tscn")
 
 # Sound FX player
 var player_sfx = null

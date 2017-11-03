@@ -19,7 +19,6 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-collision/layers = 2
 script/script = ExtResource( 1 )
 bulletDamage = 5
 bulletSpeed = 400

@@ -84,7 +84,7 @@ transform/pos = Vector2( 0, 1 )
 
 [node name="ThrowDirection" type="RayCast2D" parent="."]
 
-transform/pos = Vector2( 9, -5 )
+transform/pos = Vector2( 12.4175, -7.56313 )
 transform/rot = 118.1
 enabled = false
 cast_to = Vector2( 0, 10 )

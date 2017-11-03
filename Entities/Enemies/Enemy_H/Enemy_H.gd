@@ -63,6 +63,7 @@ func ShowHitPoints(val):
 # On AREA hit
 # ---------------------------------------------------------
 func _on_area_enter(other):
+	
 	if other.is_in_group("PLAYER"):
 		other.Damage(damage,velocity)
 		queue_free()
@@ -71,6 +72,10 @@ func _on_area_enter(other):
 # On BODY hit
 # ---------------------------------------------------------
 func _on_body_enter(body):
+
+	if body.is_in_group("GRANADE"):
+		set_armor(body.granadeDamage)
+		
 	if body.is_in_group("PLAYER"):
 		body.Damage(10,velocity)
 

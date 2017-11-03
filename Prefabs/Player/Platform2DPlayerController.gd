@@ -5,7 +5,7 @@ var cMove = preload("res://Scripts/Classes/MovePlatformer.gd")
 var cInput = load("res://Scripts/Classes/InputManager.gd")
 var cAnimState = preload("res://Scripts/Classes/AnimationState.gd")
 var cShooting = preload("res://Scripts/Classes/Shooting.gd")
-
+var cThrowing  = preload("res://Scripts/Classes/Throwing.gd")
 # exports to inspector
 export var playerMaxSpeed = 200
 export var acceleration = 0.2
@@ -19,11 +19,13 @@ var key_right= null
 var key_jump= null
 var key_crunch= null
 var key_fire = null
+var key_throw = null
 
 var player = null
 var move = null
 var anim = null
 var fire = null
+var throw = null
 
 var teleport_info = null
 var msg_info = null
@@ -64,6 +66,7 @@ func _ready():
 	key_jump = cInput.new("key_jump"); container.add_child(key_jump)
 	key_fire = cInput.new("key_fire"); container.add_child(key_fire)
 	key_crunch = cInput.new("key_down"); container.add_child(key_crunch)
+	key_throw = cInput.new("key_throw"); container.add_child(key_throw)
 
 	# get player object
 
@@ -82,7 +85,8 @@ func _ready():
 	var fire_pivot = get_node("FireOrigin_RIGHT")
 	fire = cShooting.new(move, key_fire,Global.bullet_prefab,container,fire_pivot,false)
 
-	throw_dir = get_node("ThrowDirection");
+	throw = cThrowing.new(player,key_throw,Global.granade_prefab,container)
+	
 
 	#disable rapid fire
 
@@ -144,7 +148,10 @@ func _fixed_process(delta):
 
 	# check shooting
 	fire.Check()
-
+	
+	# check throwing
+	throw.Check()
+	
 	# update viewport position
 	if move.inMotion: emit_signal("moveSignal")
 
