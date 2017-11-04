@@ -16,6 +16,7 @@ func _ready():
 # Enter to zone
 #------------------------------------------------
 func EnterToEndPoint():
+	Inventory.Save()
 	# additional code here
 	pass
 

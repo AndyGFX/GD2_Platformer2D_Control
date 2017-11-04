@@ -14,7 +14,8 @@ func _ready():
 #------------------------------------------------
 # Enter to zone
 #------------------------------------------------
-func EnterToStartPoint():
+func EnterToStartPoint():	
+	Inventory.Load()
 	# additional code here
 	pass
 
