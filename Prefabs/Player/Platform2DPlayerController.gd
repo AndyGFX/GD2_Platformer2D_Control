@@ -106,16 +106,17 @@ func _ready():
 	# enable update per frame
 	set_fixed_process(true)
 
-	# prepare inventory/gamedata to default values
-	Inventory.Set('coins',0);
-	Inventory.Set('health',100);
-	Inventory.Set('ammo',100);
-	Inventory.Set('granade',9);
-	Inventory.Set('KEY_A',false);
-	Inventory.Set('KEY_B',false);
-	Inventory.Set('KEY_C',false);
-	Inventory.Set('KEY_D',false);
-	Inventory.Save()
+	# prepare inventory/gamedata to default values (remove when you need reset items amount)
+	
+#	Inventory.Set('coins',0);
+#	Inventory.Set('health',100);
+#	Inventory.Set('ammo',100);
+#	Inventory.Set('granade',9);
+#	Inventory.Set('KEY_A',false);
+#	Inventory.Set('KEY_B',false);
+#	Inventory.Set('KEY_C',false);
+#	Inventory.Set('KEY_D',false);
+#	Inventory.Save()
 
 	# get sound fx library for player
 	Global.player_sfx = Utils.find_node("PlayerSoundFX")
@@ -229,7 +230,12 @@ func _on_TriggerDetector_area_enter( area ):
 
 		# remove powerup
 		area.PickupPowerUpGravity()
-
+	
+	# | Pickup timelimited gravity
+	# -----------------------------------------------------
+	if area.has_method('EnterToEndPoint'):
+		area.EnterToEndPoint()
+		
 # ---------------------------------------------------------
 # ON EXIT TRIGGER callback for scene entities
 # ---------------------------------------------------------

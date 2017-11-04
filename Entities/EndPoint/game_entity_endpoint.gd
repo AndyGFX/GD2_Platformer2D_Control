@@ -17,6 +17,7 @@ func _ready():
 #------------------------------------------------
 func EnterToEndPoint():
 	Inventory.Save()
+	get_tree().change_scene(next_scene)
 	# additional code here
 	pass
 
