@@ -61,4 +61,20 @@
   <property name="item_id" type="int" default="0"/>
   <property name="speed" type="int" default="20"/>
  </objecttype>
+ <objecttype name="SWITCH" color="#a0a0a4">
+  <property name="callback" type="string" default="&lt;undefined&gt;"/>
+  <property name="item_id" type="int" default="0"/>
+  <property name="key_name" type="string" default="up_key"/>
+  <property name="set_state" type="bool" default="true"/>
+  <property name="switch_mode" type="string" default="&lt;on_enter/on_key&gt;"/>
+  <property name="target_name" type="string" default="&lt;undefined&gt;"/>
+ </objecttype>
+ <objecttype name="LIGHT" color="#ffff00">
+  <property name="color" type="color" default="#ffffffff"/>
+  <property name="item_id" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="GRANADE" color="#a0a0a4">
+  <property name="item_amount" type="int" default="1"/>
+  <property name="item_id" type="int" default="0"/>
+ </objecttype>
 </objecttypes>

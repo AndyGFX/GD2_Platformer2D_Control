@@ -18,6 +18,7 @@ var facing = Global.eFacing.TO_RIGHT
 var world_gravity = Vector2(0,1000)
 var jumpForce = 400
 var jumpTreshold = 0.2
+var max_jump_count = 2
 
 # -----------------------------------------------------------
 # Movement states
@@ -39,6 +40,7 @@ var _stored_speed = 0
 var _stored_gravity = Vector2(0,1000)
 var _shape_walk = null
 var _shape_crunch = null
+var _jump_count = 0
 
 # -----------------------------------------------------------
 # Movement constants
@@ -50,7 +52,7 @@ const MIN_SPEED = 0.2
 # -----------------------------------------------------------
 # Platformer2D move constructor
 # -----------------------------------------------------------
-func _init(obj,mKeyLeft,mKeyRight,mKeyJump,mKeyCrunch,object_speed, object_acceleration,obj_jump_force,obj_jump_treshold):
+func _init(obj,mKeyLeft,mKeyRight,mKeyJump,mKeyCrunch,object_speed, object_acceleration,obj_jump_force,obj_jump_count):
 	object = obj
 	key_1 = mKeyLeft
 	key_2 = mKeyRight
@@ -59,7 +61,7 @@ func _init(obj,mKeyLeft,mKeyRight,mKeyJump,mKeyCrunch,object_speed, object_accel
 	speed = object_speed
 	accel = object_acceleration
 	jumpForce = obj_jump_force
-	jumpTreshold = obj_jump_treshold
+	max_jump_count = obj_jump_count
 
 	# store movement properties for Restore methods
 	_stored_gravity = world_gravity
@@ -78,7 +80,7 @@ func _init(obj,mKeyLeft,mKeyRight,mKeyJump,mKeyCrunch,object_speed, object_accel
 func Apply(delta):
 
 	velocity += world_gravity * delta
-	_jump_timer += delta
+
 	movement = 0
 	inMotion = false
 
@@ -109,16 +111,14 @@ func Apply(delta):
 	velocity = object.move_and_slide(velocity,FLOOR_NORMAL,SLOPE_FRICTION)
 	isOnGround = object.is_move_and_slide_on_floor()
 
-	if(isOnGround): _jump_timer = 0
-
-	# is jump enabled by treshold time ?
-	_is_enabled = _jump_timer < jumpTreshold
+	if(isOnGround):
+		_jump_count = 0
 
 	# Apply jump force on key pressed when is enabled
-	if key_3.IsPressed() and _is_enabled:
+	if key_3.IsPressed() and _jump_count<max_jump_count:
 		jumping = true
 		velocity.y -= jumpForce
-		_jump_timer = jumpTreshold
+		_jump_count += 1
 
 	if velocity.y > 0:
 		jumping = false

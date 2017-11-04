@@ -6,11 +6,12 @@ var cInput = load("res://Scripts/Classes/InputManager.gd")
 var cAnimState = preload("res://Scripts/Classes/AnimationState.gd")
 var cShooting = preload("res://Scripts/Classes/Shooting.gd")
 var cThrowing  = preload("res://Scripts/Classes/Throwing.gd")
+
 # exports to inspector
 export var playerMaxSpeed = 200
 export var acceleration = 0.2
 export var jumpForce = 200
-export var jumpTreshold = 0.2
+export var jumpCount = 2
 
 # clear instances
 
@@ -74,7 +75,7 @@ func _ready():
 
 	# create platformer2D move controller
 
-	move = cMove.new(player, key_left, key_right, key_jump, key_crunch, playerMaxSpeed, acceleration, jumpForce, jumpTreshold)
+	move = cMove.new(player, key_left, key_right, key_jump, key_crunch, playerMaxSpeed, acceleration, jumpForce, jumpCount)
 
 	# create AnimationState class
 

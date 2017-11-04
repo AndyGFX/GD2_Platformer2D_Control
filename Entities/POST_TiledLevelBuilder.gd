@@ -50,6 +50,11 @@ func CheckProperties(obj):
 		Check(obj,"item_amount",10)
 		Check(obj,"item_id",0)
 
+	if type == "GRANADE":
+		Check(obj,"item_amount",1)
+		Check(obj,"item_id",0)
+
+
 	if type == "HEALTH":
 		Check(obj,"item_amount",100)
 		Check(obj,"item_limit",100)
@@ -144,6 +149,16 @@ func DumpProperties(obj):
 		Dump(obj,"item_amount")
 		Dump(obj,"item_id")
 
+	# GRANADE ------------------------------------------------
+
+	if type == "GRANADE":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"type")
+		Dump(obj,"item_amount")
+		Dump(obj,"item_id")
+		
 	# HEALTH ----------------------------------------------
 
 	if type == "HEALTH":
@@ -294,6 +309,7 @@ func BuildEntity(scene,node,obj):
 	if type == "COIN": Entity_COIN(scene,node,obj)
 	if type == "KEY": Entity_KEY(scene,node,obj)
 	if type == "AMMO": Entity_AMMO(scene,node,obj)
+	if type == "GRANADE": Entity_GRANADE(scene,node,obj)
 	if type == "HEALTH": Entity_HEALTH(scene,node,obj)
 	if type == "POWER_UP_GRAVITY": Entity_GRAVITY(scene,node,obj)
 	if type == "POWER_UP_JUMP": Entity_JUMP(scene,node,obj)
@@ -385,6 +401,32 @@ func Entity_AMMO(scene,node,obj):
 	node.add_child(ent)
 	ent.set_owner(scene)
 
+# -------------------------------------------------------
+# GRANADE
+# -------------------------------------------------------
+func Entity_GRANADE(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_granade.size()):
+		print("ERROR: GRANADE item ID > "+str(ent_granade.size()))
+
+	var item_amount = obj.get_meta("item_amount")
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	var ent = ent_granade[item_id].instance()
+
+	obj.free()
+
+	ent.item_id = item_id
+	ent.item_amount = item_amount
+
+	ent.set_name(name)
+	ent.set_pos(pos)
+
+	node.add_child(ent)
+	ent.set_owner(scene)
+	
 # -------------------------------------------------------
 # HEALTH
 # -------------------------------------------------------
@@ -746,7 +788,7 @@ func Entity_LIGHT(scene,node,obj):
 
 	# set properties
 	light.set_color(color)
-	
+	light.get_node("Sprite").set_modulate(Color(color))
 
 	# set name and position
 	light.set_name(name)

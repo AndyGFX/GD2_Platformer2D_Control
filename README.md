@@ -30,12 +30,13 @@ Show info on enter door trigger
     - IsReleased
 - class for shooting
     - with rapid fire option on/off
+- class for throwing
 - class for Platformer2D movement
     - move left
     - move right
-    - move jump
-    - move fall
-    - pickup
+    - jump/double jump
+    - fall
+    - pickup    
     - crunch
 - class for animation state checker by assigned Platformer2D movement instance
 - collision check is included inside classes
@@ -46,9 +47,10 @@ Show info on enter door trigger
 - save/load inventory data to file
 - teleport from/to (is defined as NODE) via target name of second teleport node with option for requested key
 - message box entity for show info when player hit area
-- pickup coins (is defined as NODE)
-- pickup ammo (is defined as NODE)
-- pickup key (is defined as NODE)
+- pickup coins 
+- pickup ammo
+- pickup key
+- pickup granade
 - pickup healt (is defined as NODE)
 - pickup time limited powerUp jump modifier 
 - pickup time limited powerUp gravity modifier 

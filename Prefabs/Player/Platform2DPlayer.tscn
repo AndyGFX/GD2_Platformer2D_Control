@@ -36,7 +36,7 @@ script/script = ExtResource( 1 )
 playerMaxSpeed = 200
 acceleration = 0.2
 jumpForce = 200
-jumpTreshold = 0.2
+jumpCount = 1
 
 [node name="PlayerAnimation" parent="." instance=ExtResource( 2 )]
 
