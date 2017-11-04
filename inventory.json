@@ -1,1 +1,1 @@
-{"KEY_C":false, "KEY_D":false, "coins":2, "health":100, "KEY_A":false, "KEY_B":false, "ammo":99, "granade":6}
+{"KEY_C":true, "KEY_D":true, "coins":2, "powerup_jump":0, "health":30, "powerup_gravity":0, "KEY_A":true, "KEY_B":true, "ammo":197, "granade":5, "powerup_speed":0}

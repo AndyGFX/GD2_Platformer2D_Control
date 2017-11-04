@@ -67,6 +67,7 @@ stretch_mode = 0
 
 [node name="HUD_GRANADE" type="Control" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -265,7 +266,6 @@ max_lines_visible = -1
 
 [node name="HUD -PowerUps" type="Control" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -391,8 +391,8 @@ stretch_mode = 0
 
 [node name="TransitionScreen" parent="." instance=ExtResource( 13 )]
 
+visibility/visible = false
 margin/right = -33.0
 margin/bottom = -48.0
-speed = 2
 
 

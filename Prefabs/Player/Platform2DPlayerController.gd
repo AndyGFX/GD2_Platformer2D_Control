@@ -112,6 +112,9 @@ func _ready():
 #	Inventory.Set('health',100);
 #	Inventory.Set('ammo',100);
 #	Inventory.Set('granade',9);
+#	Inventory.Set('powerup_speed',0);
+#	Inventory.Set('powerup_jump',0);
+#	Inventory.Set('powerup_gravity',0);
 #	Inventory.Set('KEY_A',false);
 #	Inventory.Set('KEY_B',false);
 #	Inventory.Set('KEY_C',false);
