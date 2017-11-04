@@ -31,8 +31,6 @@ jumpForce = 300
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 
-editor/display_folded = true
-
 [node name="Frame" parent="HUD/HUD_Coins"]
 
 modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
@@ -44,6 +42,10 @@ modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
 [node name="Frame" parent="HUD/HUD_Ammo"]
 
 modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+
+[node name="TransitionScreen" parent="HUD"]
+
+speed = 2
 
 [node name="SoundFX" parent="." instance=ExtResource( 5 )]
 

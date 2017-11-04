@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://Prefabs/Hud/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Hud/HUD-Backgroun.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Entities/PowerUp_Speed/Speed_0.png" type="Texture" id=10]
 [ext_resource path="res://Entities/PowerUp_Jump/Jump_0.png" type="Texture" id=11]
 [ext_resource path="res://Entities/PowerUp_Gravity/Gravity_0.png" type="Texture" id=12]
+[ext_resource path="res://Prefabs/Transition/TransitionScreen.tscn" type="PackedScene" id=13]
 
 [node name="HUD" type="Container"]
 
@@ -387,5 +388,11 @@ margin/bottom = 311.0
 texture = ExtResource( 12 )
 modulate = Color( 0, 0, 0, 1 )
 stretch_mode = 0
+
+[node name="TransitionScreen" parent="." instance=ExtResource( 13 )]
+
+margin/right = -33.0
+margin/bottom = -48.0
+speed = 2
 
 

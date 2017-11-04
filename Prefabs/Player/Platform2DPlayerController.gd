@@ -124,6 +124,9 @@ func _ready():
 	# respawn play at 'start_point'
 	Respawn()
 
+	# Execute transition
+	var transition = Utils.find_node("HUD").get_node("TransitionScreen")
+	transition.Start(Global.TO_TRANSPARENT)
 	pass
 
 
@@ -234,6 +237,9 @@ func _on_TriggerDetector_area_enter( area ):
 	# | Pickup timelimited gravity
 	# -----------------------------------------------------
 	if area.has_method('EnterToEndPoint'):
+		var transition = Utils.find_node("HUD").get_node("TransitionScreen")
+		transition.Start(Global.TO_BLACK)
+		yield(Utils.create_timer(1), "timeout") 
 		area.EnterToEndPoint()
 		
 # ---------------------------------------------------------

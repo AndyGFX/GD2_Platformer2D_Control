@@ -11,6 +11,8 @@ enum eDirection { IDLE = 0,TO_LEFT = -1, TO_RIGHT=1, TO_UP = -1, TO_DOWN = 1 }
 # Animation state
 enum eAnimState { IDLE, WALK, JUMP, FALL, DIE, HURT, CLIMB, OBSTACLE, CRUNCH, CRUNCHWALK }
 
+# screen transition mode
+enum eTransitionMode { NONE,TO_BLACK,TO_TRANSPARENT}
 
 # ---------------------------------------------------------------------------
 # GAME data
