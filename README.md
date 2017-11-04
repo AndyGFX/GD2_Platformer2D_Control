@@ -51,7 +51,7 @@ Show info on enter door trigger
 - pickup ammo
 - pickup key
 - pickup granade
-- pickup healt (is defined as NODE)
+- pickup health
 - pickup time limited powerUp jump modifier 
 - pickup time limited powerUp gravity modifier 
 - pickup time limited powerUp speed modifier 
@@ -63,6 +63,7 @@ Show info on enter door trigger
     - [down arroe] = crunch toggle on/off
     - [space] = jump
     - [W] = fire
+    - [Q] - throw
     - working features:
         - pickup coins + hud info
         - pickup health + hud info (max limit 100)
@@ -73,7 +74,7 @@ Show info on enter door trigger
         - teleport to second linked teleport by name
         - pickup key
         - damage by enemy
-        - destroy enemy
+        - destroy enemy (fire and granade)
         - bullet explosion
         - teleport with requested key
         - show info when player enter to teleport area
