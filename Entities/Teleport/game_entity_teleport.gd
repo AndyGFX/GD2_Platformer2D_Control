@@ -21,7 +21,7 @@ func _ready():
 #------------------------------------------------
 func Teleport(player):
 	if need_key: set_process(true)
-	if !need_key and get_node("/root/Inventory").HasItem(need_key,true): set_process(true)
+	if !need_key and Inventory.HasItem(need_key,true): set_process(true)
 	eventOwner = player
 	pass
 

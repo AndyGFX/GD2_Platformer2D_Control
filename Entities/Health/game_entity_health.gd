@@ -16,6 +16,6 @@ func _ready():
 # pickup item method which is called from area detector assigned on player
 # ---------------------------------------------------------
 func PickupHealth():
-	if !has_node("/root/Inventory"): return
-	get_node("/root/Inventory").AddWithLimitCheck(item_type,item_amount,item_limit);
+	if !Inventory: return
+	Inventory.AddWithLimitCheck(item_type,item_amount,item_limit);
 	queue_free()

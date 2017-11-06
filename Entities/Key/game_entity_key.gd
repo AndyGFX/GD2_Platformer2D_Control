@@ -13,6 +13,6 @@ func _ready():
 
 # pickup key method which is called from area detector assigned on player
 func PickupKey():
-	if !has_node("/root/Inventory"): return
-	get_node("/root/Inventory").Set(key_name,true)
+	if !Inventory: return
+	Inventory.Set(key_name,true)
 	queue_free()

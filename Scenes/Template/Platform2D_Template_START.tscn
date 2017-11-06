@@ -43,9 +43,9 @@ modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
 
 modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
 
-[node name="TransitionScreen" parent="HUD"]
+[node name="HUD -PowerUps" parent="HUD"]
 
-speed = 2
+editor/display_folded = true
 
 [node name="SoundFX" parent="." instance=ExtResource( 5 )]
 

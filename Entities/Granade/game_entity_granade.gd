@@ -11,7 +11,7 @@ func _ready():
 	pass
 
 # pickup ammo item method which is called from area detector assigned on player
-func PickupAmmo():
-	if !has_node("/root/Inventory"): return
-	get_node("/root/Inventory").Add(item_type,item_amount)
+func PickupGranade():
+	if !Inventory: return	
+	Inventory.Add(item_type,item_amount)
 	queue_free()

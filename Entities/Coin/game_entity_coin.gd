@@ -13,6 +13,6 @@ func _ready():
 
 # pickup item method which is called from area detector assigned on player
 func PickupCoin():
-	if !has_node("/root/Inventory"): return
-	get_node("/root/Inventory").Add(item_type,item_amount)
+	if !Inventory: return	
+	Inventory.Add(item_type,item_amount)
 	queue_free()
