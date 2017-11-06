@@ -130,4 +130,8 @@ max_lines_visible = -1
 
 [connection signal="button_down" from="VBoxContainer/Button-PLAY" to="." method="_on_ButtonPLAY_button_down"]
 
+[connection signal="button_down" from="VBoxContainer/Button-OPTION" to="." method="_on_ButtonOPTION_button_down"]
+
+[connection signal="button_down" from="VBoxContainer/Button-EXIT" to="." method="_on_ButtonEXIT_button_down"]
+
 
