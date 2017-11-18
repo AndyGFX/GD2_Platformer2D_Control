@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Entities/Enemies/Enemy_V/Enemy_V.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Enemies/Enemy_V/Enemy_V_0.png" type="Texture" id=2]
+
+[node name="Enemy_V" type="Area2D"]
+
+input/pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+armor = 100
+damage = 10
+speed = 25
+velocity = Vector2( 0, 0 )
+top_end_point = 0
+bottom_end_point = 0
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+

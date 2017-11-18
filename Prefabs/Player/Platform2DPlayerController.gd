@@ -108,18 +108,18 @@ func _ready():
 
 	# prepare inventory/gamedata to default values (remove when you need reset items amount)
 	
-#	Inventory.Set('coins',0);
-#	Inventory.Set('health',100);
-#	Inventory.Set('ammo',100);
-#	Inventory.Set('granade',9);
-#	Inventory.Set('powerup_speed',0);
-#	Inventory.Set('powerup_jump',0);
-#	Inventory.Set('powerup_gravity',0);
-#	Inventory.Set('KEY_A',false);
-#	Inventory.Set('KEY_B',false);
-#	Inventory.Set('KEY_C',false);
-#	Inventory.Set('KEY_D',false);
-#	Inventory.Save()
+	Inventory.Set('coins',0);
+	Inventory.Set('health',100);
+	Inventory.Set('ammo',100);
+	Inventory.Set('granade',9);
+	Inventory.Set('powerup_speed',0);
+	Inventory.Set('powerup_jump',0);
+	Inventory.Set('powerup_gravity',0);
+	Inventory.Set('KEY_A',false);
+	Inventory.Set('KEY_B',false);
+	Inventory.Set('KEY_C',false);
+	Inventory.Set('KEY_D',false);
+	Inventory.Save()
 
 	# get sound fx library for player
 	Global.player_sfx = Utils.find_node("PlayerSoundFX")

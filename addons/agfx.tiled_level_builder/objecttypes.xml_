@@ -54,4 +54,63 @@
   <property name="target_name" type="string" default="&lt;undefined&gt;"/>
   <property name="teleport_type" type="int" default="0"/>
  </objecttype>
+ <objecttype name="occluder" color="#f5f5ff"/>
+ <objecttype name="ENEMY_H" color="#ff0000">
+  <property name="armor" type="int" default="50"/>
+  <property name="damage" type="int" default="10"/>
+  <property name="item_id" type="int" default="0"/>
+  <property name="speed" type="int" default="20"/>
+ </objecttype>
+ <objecttype name="SWITCH" color="#a0a0a4">
+  <property name="callback" type="string" default="&lt;undefined&gt;"/>
+  <property name="item_id" type="int" default="0"/>
+  <property name="key_name" type="string" default="up_key"/>
+  <property name="set_state" type="bool" default="true"/>
+  <property name="switch_mode" type="string" default="&lt;on_enter/on_key&gt;"/>
+  <property name="target_name" type="string" default="&lt;undefined&gt;"/>
+ </objecttype>
+ <objecttype name="LIGHT" color="#ffff00">
+  <property name="color" type="color" default="#ffffffff"/>
+  <property name="item_id" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="GRANADE" color="#a0a0a4">
+  <property name="item_amount" type="int" default="1"/>
+  <property name="item_id" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="PLATFORM_H" color="#00aa00">
+  <property name="item_id" type="int" default="0"/>
+  <property name="left_end_point" type="int" default="16"/>
+  <property name="right_end_point" type="int" default="16"/>
+  <property name="speed" type="int" default="100"/>
+ </objecttype>
+ <objecttype name="PLATFORM_V" color="#00aa00">
+  <property name="bottom_end_point" type="int" default="16"/>
+  <property name="item_id" type="int" default="0"/>
+  <property name="speed" type="int" default="100"/>
+  <property name="top_end_point" type="int" default="16"/>
+ </objecttype>
+ <objecttype name="HAZARD_L" color="#ff0000">
+  <property name="damage" type="int" default="100"/>
+  <property name="item_id" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="HAZARD_R" color="#aa0000">
+  <property name="damage" type="int" default="100"/>
+  <property name="item_id" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="HAZARD_U" color="#aa0000">
+  <property name="damage" type="int" default="100"/>
+  <property name="item_id" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="HAZARD_D" color="#aa0000">
+  <property name="damage" type="int" default="100"/>
+  <property name="item_id" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="ENEMY_V" color="#ff0000">
+  <property name="armor" type="int" default="100"/>
+  <property name="bottom_end_point" type="int" default="16"/>
+  <property name="damage" type="int" default="20"/>
+  <property name="item_id" type="int" default="0"/>
+  <property name="speed" type="int" default="100"/>
+  <property name="top_end_point" type="int" default="16"/>
+ </objecttype>
 </objecttypes>

@@ -35,6 +35,35 @@ func post_import(scene):
 	# You must return the modified scene
 	return scene
 
+# -------------------------------------------------------
+# Build and replace objects in scene
+# -------------------------------------------------------
+func BuildEntity(scene,node,obj):
+	var type = obj.get_meta("type")
+
+	if type == "COIN": Entity_COIN(scene,node,obj)
+	if type == "KEY": Entity_KEY(scene,node,obj)
+	if type == "AMMO": Entity_AMMO(scene,node,obj)
+	if type == "GRANADE": Entity_GRANADE(scene,node,obj)
+	if type == "HEALTH": Entity_HEALTH(scene,node,obj)
+	if type == "POWER_UP_GRAVITY": Entity_GRAVITY(scene,node,obj)
+	if type == "POWER_UP_JUMP": Entity_JUMP(scene,node,obj)
+	if type == "POWER_UP_SPEED": Entity_SPEED(scene,node,obj)
+	if type == "MSG_INFO": Entity_MSGINFO(scene,node,obj)
+	if type == "START_POINT": Entity_STARTPOINT(scene,node,obj)
+	if type == "END_POINT": Entity_ENDPOINT(scene,node,obj)
+	if type == "TELEPORT": Entity_TELEPORT(scene,node,obj)
+	if type == "ENEMY_H": Entity_ENEMY_H(scene,node,obj)
+	if type == "ENEMY_V": Entity_ENEMY_V(scene,node,obj)
+	if type == "SWITCH": Entity_SWITCH(scene,node,obj)
+	if type == "LIGHT": Entity_LIGHT(scene,node,obj)
+	if type == "PLATFORM_H": Entity_PLATFORM_H(scene,node,obj)
+	if type == "PLATFORM_V": Entity_PLATFORM_V(scene,node,obj)
+	if type == "HAZARD_L": Entity_HAZARD_L(scene,node,obj)
+	if type == "HAZARD_R": Entity_HAZARD_R(scene,node,obj)
+	if type == "HAZARD_U": Entity_HAZARD_U(scene,node,obj)
+	if type == "HAZARD_D": Entity_HAZARD_D(scene,node,obj)
+
 # ---------------------------------------------------------
 # Prepare defaults
 # ---------------------------------------------------------
@@ -53,7 +82,6 @@ func CheckProperties(obj):
 	if type == "GRANADE":
 		Check(obj,"item_amount",1)
 		Check(obj,"item_id",0)
-
 
 	if type == "HEALTH":
 		Check(obj,"item_amount",100)
@@ -108,6 +136,14 @@ func CheckProperties(obj):
 		Check(obj,"damage",10)
 		Check(obj,"speed",20)
 
+	if type == "ENEMY_V":
+		Check(obj,"armor",25)
+		Check(obj,"item_id",0)
+		Check(obj,"damage",10)
+		Check(obj,"speed",20)
+		Check(obj,"top_end_point",16)
+		Check(obj,"bottom_end_point",16)
+
 	if type == "SWITCH":
 		Check(obj,"item_id",0)
 		Check(obj,"callback","<undefined>")
@@ -116,10 +152,38 @@ func CheckProperties(obj):
 		Check(obj,"switch_mode","OnEnter")   # OnEnter / OnKey
 		Check(obj,"target_name","<undefined>")
 
-	if type == "LIGHT":		
+	if type == "LIGHT":
 		Check(obj,"item_id",0)
 		Check(obj,"color","#ffffffff")
-		
+
+	if type == "PLATFORM_H":
+		Check(obj,"item_id",0)
+		Check(obj,"left_end_point",16)
+		Check(obj,"right_end_point",16)
+		Check(obj,"speed",100)
+
+	if type == "PLATFORM_V":
+		Check(obj,"item_id",0)
+		Check(obj,"top_end_point",16)
+		Check(obj,"bottom_end_point",16)
+		Check(obj,"speed",100)
+
+	if type == "HAZARD_L":
+		Check(obj,"item_id",0)
+		Check(obj,"damage",0)
+
+	if type == "HAZARD_R":
+		Check(obj,"item_id",0)
+		Check(obj,"damage",0)
+
+	if type == "HAZARD_D":
+		Check(obj,"item_id",0)
+		Check(obj,"damage",0)
+
+	if type == "HAZARD_U":
+		Check(obj,"item_id",0)
+		Check(obj,"damage",0)
+
 	return obj
 
 # ---------------------------------------------------------
@@ -158,7 +222,7 @@ func DumpProperties(obj):
 		Dump(obj,"type")
 		Dump(obj,"item_amount")
 		Dump(obj,"item_id")
-		
+
 	# HEALTH ----------------------------------------------
 
 	if type == "HEALTH":
@@ -270,10 +334,23 @@ func DumpProperties(obj):
 		Dump(obj,"damage")
 		Dump(obj,"speed")
 
+	if type == "ENEMY_V":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"type")
+		Dump(obj,"armor")
+		Dump(obj,"item_id")
+		Dump(obj,"damage")
+		Dump(obj,"speed")
+		Dump(obj,"top_end_point")
+		Dump(obj,"bottom_end_point")
+
 	if type == "SWITCH":
 		print("---------------------------------------------------------")
 		print("Entity: "+obj.get_name())
 		print("---------------------------------------------------------")
+		Dump(obj,"type")
 		Dump(obj,"item_id")
 		Dump(obj,"callback")
 		Dump(obj,"key_name")
@@ -285,8 +362,61 @@ func DumpProperties(obj):
 		print("---------------------------------------------------------")
 		print("Entity: "+obj.get_name())
 		print("---------------------------------------------------------")
+		Dump(obj,"type")
 		Dump(obj,"item_id")
 		Dump(obj,"color")
+
+	if type == "PLATFROM_H":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"type")
+		Dump(obj,"item_id")
+		Dump(obj,"left_end_point")
+		Dump(obj,"right_end_point")
+		Dump(obj,"speed")
+
+	if type == "PLATFROM_V":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"type")
+		Dump(obj,"item_id")
+		Dump(obj,"top_end_point")
+		Dump(obj,"bottom_end_point")
+		Dump(obj,"speed")
+
+	if type == "HAZARD_L":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"type")
+		Dump(obj,"item_id")
+		Dump(obj,"damage")
+
+	if type == "HAZARD_R":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"type")
+		Dump(obj,"item_id")
+		Dump(obj,"damage")
+
+	if type == "HAZARD_U":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"type")
+		Dump(obj,"item_id")
+		Dump(obj,"damage")
+
+	if type == "HAZARD_D":
+		print("---------------------------------------------------------")
+		print("Entity: "+obj.get_name())
+		print("---------------------------------------------------------")
+		Dump(obj,"type")
+		Dump(obj,"item_id")
+		Dump(obj,"damage")
 
 # -------------------------------------------------------
 # Helpert for dump entity property to console
@@ -300,27 +430,7 @@ func Dump(obj,prop):
 func Check(obj,prop,val):
 	if !obj.has_meta(prop): obj.set_meta(prop,val)
 
-# -------------------------------------------------------
-# Build and replace objects in scene
-# -------------------------------------------------------
-func BuildEntity(scene,node,obj):
-	var type = obj.get_meta("type")
 
-	if type == "COIN": Entity_COIN(scene,node,obj)
-	if type == "KEY": Entity_KEY(scene,node,obj)
-	if type == "AMMO": Entity_AMMO(scene,node,obj)
-	if type == "GRANADE": Entity_GRANADE(scene,node,obj)
-	if type == "HEALTH": Entity_HEALTH(scene,node,obj)
-	if type == "POWER_UP_GRAVITY": Entity_GRAVITY(scene,node,obj)
-	if type == "POWER_UP_JUMP": Entity_JUMP(scene,node,obj)
-	if type == "POWER_UP_SPEED": Entity_SPEED(scene,node,obj)
-	if type == "MSG_INFO": Entity_MSGINFO(scene,node,obj)
-	if type == "START_POINT": Entity_STARTPOINT(scene,node,obj)
-	if type == "END_POINT": Entity_ENDPOINT(scene,node,obj)
-	if type == "TELEPORT": Entity_TELEPORT(scene,node,obj)
-	if type == "ENEMY_H": Entity_ENEMY_H(scene,node,obj)
-	if type == "SWITCH": Entity_SWITCH(scene,node,obj)
-	if type == "LIGHT": Entity_LIGHT(scene,node,obj)
 
 
 # -------------------------------------------------------
@@ -426,7 +536,7 @@ func Entity_GRANADE(scene,node,obj):
 
 	node.add_child(ent)
 	ent.set_owner(scene)
-	
+
 # -------------------------------------------------------
 # HEALTH
 # -------------------------------------------------------
@@ -619,10 +729,11 @@ func Entity_ENDPOINT(scene,node,obj):
 		print("ERROR: END POINT item ID > "+str(ent_endpoint.size()))
 
 	# read meta data
-	#
+	
 	var pos = obj.get_pos()
 	var name = obj.get_name()
-
+	var next_scene = obj.get_meta("next_scene")
+	
 	# create entity instance
 	var endpoint = ent_endpoint[item_id].instance()
 
@@ -635,7 +746,8 @@ func Entity_ENDPOINT(scene,node,obj):
 	# set name and position
 	endpoint.set_name(name)
 	endpoint.set_pos(pos)
-
+	endpoint.next_scene = next_scene
+	
 	# add to scene under parent
 	node.add_child(endpoint)
 	endpoint.set_owner(scene)
@@ -684,13 +796,13 @@ func Entity_TELEPORT(scene,node,obj):
 
 
 # -------------------------------------------------------
-# ENEMY with HORIZONTAL MOVE
+# ENEMY with HORIZONTAL MOVEMENT
 # -------------------------------------------------------
 
 func Entity_ENEMY_H(scene,node,obj):
 	var item_id = obj.get_meta("item_id")
 	if (item_id>ent_enemy_h.size()):
-		print("ERROR: ENEMY item ID > "+str(ent_enemy_h.size()))
+		print("ERROR: ENEMY H item ID > "+str(ent_enemy_h.size()))
 
 	# read meta data
 
@@ -703,6 +815,44 @@ func Entity_ENEMY_H(scene,node,obj):
 
 	# create entity instance
 	var enemy = ent_enemy_h[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+
+	enemy.speed = speed
+	enemy.armor = armor
+	enemy.damage = damage
+
+	# set name and position
+	enemy.set_name(name)
+	enemy.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(enemy)
+	enemy.set_owner(scene)
+
+# -------------------------------------------------------
+# ENEMY with VERTICAL MOVEMENT
+# -------------------------------------------------------
+
+func Entity_ENEMY_V(scene,node,obj):
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_enemy_v.size()):
+		print("ERROR: ENEMY V item ID > "+str(ent_enemy_v.size()))
+
+	# read meta data
+
+	var speed = obj.get_meta("speed")
+	var armor = obj.get_meta("armor")
+	var damage = obj.get_meta("damage")
+
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var enemy = ent_enemy_v[item_id].instance()
 
 	# free previous object
 	obj.free()
@@ -764,7 +914,7 @@ func Entity_SWITCH(scene,node,obj):
 	# add to scene under parent
 	node.add_child(sw)
 	sw.set_owner(scene)
-	
+
 # -------------------------------------------------------
 # INFO MSG TEXT
 # -------------------------------------------------------
@@ -776,7 +926,6 @@ func Entity_LIGHT(scene,node,obj):
 
 	# read meta data
 	var color = obj.get_meta("color")
-	print(str(color))
 	var pos = obj.get_pos()
 	var name = obj.get_name()
 
@@ -796,5 +945,202 @@ func Entity_LIGHT(scene,node,obj):
 
 	# add to scene under parent
 	node.add_child(light)
-	light.set_owner(scene)	
-	
+	light.set_owner(scene)
+
+# -------------------------------------------------------
+# PLATFORM MOVE HORIZONTALY
+# -------------------------------------------------------
+func Entity_PLATFORM_H(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_platform_h.size()):
+		print("ERROR: PLATFORM H item ID > "+str(ent_platform_h.size()))
+
+	# read meta data
+	var left_end_point = obj.get_meta("left_end_point")
+	var right_end_point = obj.get_meta("right_end_point")
+	var speed = obj.get_meta("speed")
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var platform = ent_platform_h[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+	platform.speed = speed
+	platform.left_end_point = left_end_point
+	platform.right_end_point = right_end_point
+
+	# set name and position
+	platform.set_name(name)
+	platform.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(platform)
+	platform.set_owner(scene)
+
+# -------------------------------------------------------
+# PLATFORM MOVE VERTICALY
+# -------------------------------------------------------
+func Entity_PLATFORM_V(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_platform_v.size()):
+		print("ERROR: PLATFORM V item ID > "+str(ent_platform_v.size()))
+
+	# read meta data
+	var top_end_point = obj.get_meta("top_end_point")
+	var bottom_end_point = obj.get_meta("bottom_end_point")
+	var speed = obj.get_meta("speed")
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var platform = ent_platform_v[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+	platform.speed = speed
+	platform.top_end_point = top_end_point
+	platform.bottom_end_point = bottom_end_point
+
+	# set name and position
+	platform.set_name(name)
+	platform.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(platform)
+	platform.set_owner(scene)
+
+# -------------------------------------------------------
+# HAZARD LEFT
+# -------------------------------------------------------
+func Entity_HAZARD_L(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_hazard_l.size()):
+		print("ERROR: HAZARD L item ID > "+str(ent_hazard_l.size()))
+
+	# read meta data
+	var damage = obj.get_meta("damage")
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var hazard = ent_hazard_l[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+	hazard.damage = damage
+
+
+	# set name and position
+	hazard.set_name(name)
+	hazard.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(hazard)
+	hazard.set_owner(scene)
+
+# -------------------------------------------------------
+# HAZARD RIGHT
+# -------------------------------------------------------
+func Entity_HAZARD_R(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_hazard_r.size()):
+		print("ERROR: HAZARD R item ID > "+str(ent_hazard_r.size()))
+
+	# read meta data
+	var damage = obj.get_meta("damage")
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var hazard = ent_hazard_r[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+	hazard.damage = damage
+
+
+	# set name and position
+	hazard.set_name(name)
+	hazard.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(hazard)
+	hazard.set_owner(scene)
+
+# -------------------------------------------------------
+# HAZARD UP
+# -------------------------------------------------------
+func Entity_HAZARD_U(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_hazard_u.size()):
+		print("ERROR: HAZARD U item ID > "+str(ent_hazard_u.size()))
+
+	# read meta data
+	var damage = obj.get_meta("damage")
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var hazard = ent_hazard_u[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+	hazard.damage = damage
+
+
+	# set name and position
+	hazard.set_name(name)
+	hazard.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(hazard)
+	hazard.set_owner(scene)
+
+# -------------------------------------------------------
+# HAZARD UP
+# -------------------------------------------------------
+func Entity_HAZARD_D(scene,node,obj):
+
+	var item_id = obj.get_meta("item_id")
+	if (item_id>ent_hazard_d.size()):
+		print("ERROR: HAZARD D item ID > "+str(ent_hazard_d.size()))
+
+	# read meta data
+	var damage = obj.get_meta("damage")
+	var pos = obj.get_pos()
+	var name = obj.get_name()
+
+	# create entity instance
+	var hazard = ent_hazard_d[item_id].instance()
+
+	# free previous object
+	obj.free()
+
+	# set properties
+	hazard.damage = damage
+
+
+	# set name and position
+	hazard.set_name(name)
+	hazard.set_pos(pos)
+
+	# add to scene under parent
+	node.add_child(hazard)
+	hazard.set_owner(scene)

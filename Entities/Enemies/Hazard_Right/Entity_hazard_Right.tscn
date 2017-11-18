@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Entities/Enemies/Hazard_Right/game_hazard_right.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Enemies/Hazard_Right/Hazard_right_0.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3, 8 )
+
+[node name="Hazard_Right" type="Area2D"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 5, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+damage = 10
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 5, 0 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+

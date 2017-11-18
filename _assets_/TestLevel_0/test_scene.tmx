@@ -58,7 +58,11 @@
    </properties>
   </object>
   <object id="7" name="PlayerStart" type="START_POINT" gid="65" x="224" y="352" width="16" height="16"/>
-  <object id="9" name="NextLevel" type="END_POINT" gid="66" x="608" y="400" width="16" height="16"/>
+  <object id="9" name="NextLevel" type="END_POINT" gid="66" x="608" y="400" width="16" height="16">
+   <properties>
+    <property name="next_scene" value="res://Scenes/Template/Platform2D_Template_END.tscn"/>
+   </properties>
+  </object>
   <object id="13" name="Health" type="HEALTH" gid="68" x="472" y="95" width="16" height="16">
    <properties>
     <property name="item_id" type="int" value="3"/>
