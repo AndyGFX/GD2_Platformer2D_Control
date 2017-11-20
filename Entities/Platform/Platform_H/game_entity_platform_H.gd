@@ -13,11 +13,11 @@ export var dir = 1
 var _pos = null
 
 func _ready():
-	add_to_group("SOLID")
-	platform = get_node(".")
+	set_fixed_process(true)
+	add_to_group("PLATFORM")
 	connect("area_enter", self, "_on_area_enter")
 	connect("body_enter", self, "_on_body_enter")
-	set_process(true)
+	platform = get_node(".")
 	_pos = get_pos()
 	pass
 
@@ -34,29 +34,30 @@ func EnterToPlatform():
 func ExitFromPlatform():
 	# additional code here
 	pass
-	
+
 # ---------------------------------------------------------
 # On AREA hit
 # ---------------------------------------------------------
 func _on_area_enter(other):
+	print("AREA ENTER: "+other.get_name())
 	pass
-	
+
 # ---------------------------------------------------------
 # On BODY hit
 # ---------------------------------------------------------
 func _on_body_enter(body):
-	pass	
-	
-	
-func _process(delta):
-	
-	
+	print("BODY ENTER: "+body.get_name())
+	pass
+
+
+func _fixed_process(delta):
+
+
 	translate(Vector2(speed*delta * dir,0))
-	
+
 	var pos = get_pos()
-	
-	if (pos.x)>=(_pos.x+right_end_point) or (pos.x)<=(_pos.x-left_end_point): 
+
+	if (pos.x)>=(_pos.x+right_end_point) or (pos.x)<=(_pos.x-left_end_point):
 		dir=-dir
 	pass
-	
-	
+

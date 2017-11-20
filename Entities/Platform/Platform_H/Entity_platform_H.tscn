@@ -20,6 +20,7 @@ item_id = 0
 left_end_point = 0
 right_end_point = 0
 speed = 0
+dir = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -35,7 +36,7 @@ collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="SOLID" type="CollisionShape2D" parent="KinematicBody2D"]
 
 transform/pos = Vector2( 0, -5 )
 shape = SubResource( 1 )
