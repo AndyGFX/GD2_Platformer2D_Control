@@ -125,6 +125,11 @@ func Apply(delta):
 		inHurt = false
 
 	if velocity.y!=0 or velocity.x != 0: inMotion = true;
+	
+	var floor_velocity = object.get_collider_velocity()
+	if (floor_velocity != Vector2()):
+		# If floor moves, move with floor
+		object.move(floor_velocity*delta)
 
 # -----------------------------------------------------------
 # Get last velocity vector
