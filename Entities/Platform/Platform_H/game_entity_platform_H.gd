@@ -14,7 +14,7 @@ var _pos = null
 
 func _ready():
 	set_fixed_process(true)
-	add_to_group("PLATFORM")
+	add_to_group("PLATFORM_H")
 	connect("area_enter", self, "_on_area_enter")
 	connect("body_enter", self, "_on_body_enter")
 	platform = get_node(".")

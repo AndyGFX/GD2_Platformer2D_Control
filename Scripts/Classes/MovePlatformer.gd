@@ -108,7 +108,12 @@ func Apply(delta):
 
 	velocity.x = lerp(velocity.x, movement, accel)
 
+	var floor_velocity = object.get_collider_velocity()
+	if (floor_velocity != Vector2()):
+		object.move(floor_velocity*delta)
+
 	velocity = object.move_and_slide(velocity,FLOOR_NORMAL,SLOPE_FRICTION)
+	
 	isOnGround = object.is_move_and_slide_on_floor()
 
 	if(isOnGround):
@@ -126,10 +131,7 @@ func Apply(delta):
 
 	if velocity.y!=0 or velocity.x != 0: inMotion = true;
 	
-	var floor_velocity = object.get_collider_velocity()
-	if (floor_velocity != Vector2()):
-		# If floor moves, move with floor
-		object.move(floor_velocity*delta)
+	
 
 # -----------------------------------------------------------
 # Get last velocity vector
